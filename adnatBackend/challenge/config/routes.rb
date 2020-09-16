@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
   
-  resources :users
+  resources :users do
+      resources :organizations
+  end
   resources :sessions, only: [:new, :create, :destroy]
   
   get 'signup', to: 'users#new', as: 'signup'

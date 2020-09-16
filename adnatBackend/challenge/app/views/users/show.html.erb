@@ -10,5 +10,33 @@
   <%= @user.email %>
 </p>
 
+<h2>Organizations</h2>
+<% @user.organizations.each do |organization| %>
+  <p>
+    <strong>Name:</strong>
+    <%= organization.name %>
+  </p>
+ 
+  <p>
+    <strong>Hourly Rate:</strong>
+    <%= organization.hourlyrate %>
+  </p>
+<% end %>
+ 
+<h2>Add an Organization:</h2>
+<%= form_with(model: [ @user, @user.organizations.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :hourly_rate %><br>
+    <%= form.number_field :hourlyrate, step: 0.1 %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

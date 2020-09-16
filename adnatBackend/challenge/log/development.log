@@ -1951,3 +1951,405 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 5295)
 
 
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrganizations (20200916171617)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "hourlyrate" decimal, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_7b93e0061c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_organizations_on_user_id" ON "organizations" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200916171617"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2020-09-16 12:26:58 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"bTmTV+snF7kRQjJsYR4bLMYciLYrbpxp3eohXUepjXeVMjS6fMCTN8mdcvHxRArjBRqJPsrMN4Jy20nDIeWIHg==", "user"=>{"name"=>"c", "email"=>"c", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "c"], ["email", "c"], ["password_digest", "$2a$12$eLYuRab2gUbyQd/t4XIbuOkQJPd4gJEgDr2O5u5mEzI7o.5M8jwMy"], ["created_at", "2020-09-16 17:26:58.395122"], ["updated_at", "2020-09-16 17:26:58.395122"]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 286ms (ActiveRecord: 3.4ms | Allocations: 11103)
+
+
+Started POST "/users" for ::1 at 2020-09-16 12:27:02 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"h0OwYbvDE/Gia1gjmMg3pWERS4JjKVosCVjp4ilnr7wXI+JGPULFwGpNPm8IzTn8pN9YdSZeOMgAgqTWvTQMRA==", "user"=>{"name"=>"c", "email"=>"c", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 13.6ms | Allocations: 2516)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 3766)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 401ms (Views: 134.4ms | ActiveRecord: 0.5ms | Allocations: 39758)
+
+
+Started GET "/login" for ::1 at 2020-09-16 12:27:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 579)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 5404)
+
+
+Started GET "/users/new" for ::1 at 2020-09-16 12:27:08 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 7.5ms | Allocations: 1111)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1201)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 5380)
+
+
+Started POST "/users" for ::1 at 2020-09-16 12:27:12 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"vtGhboQ3dFIes8QkSMF2kaNUnO9JOzqDtGkjbTAQLR5G2gaDE9Dw3MZshLnYm2deYFKdZ6iZkWgbWEvzVlwodw==", "user"=>{"name"=>"v", "email"=>"v", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "v"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "v"], ["email", "v"], ["password_digest", "$2a$12$chGe7mmrLGzRHXuJ/pP9/u/B9JySwk.rB8iRiIuN7R79ddF0eE4YK"], ["created_at", "2020-09-16 17:27:12.608587"], ["updated_at", "2020-09-16 17:27:12.608587"]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 266ms (ActiveRecord: 2.9ms | Allocations: 4019)
+
+
+Started GET "/users/6" for ::1 at 2020-09-16 12:27:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3232)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms | Allocations: 4546)
+
+
+  
+ActionView::Template::Error (undefined method `organization' for #<User:0x00007fbebfaca4b0>
+Did you mean?  organizations
+               organizations=):
+    11: </p>
+    12: 
+    13: <h2>Organizations</h2>
+    14: <% @user.organization.each do |organization| %>
+    15:   <p>
+    16:     <strong>Name:</strong>
+    17:     <%= organization.name %>
+  
+app/views/users/show.html.erb:14
+Started GET "/users/6" for ::1 at 2020-09-16 12:27:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 129.0ms | Allocations: 17738)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 159ms (Views: 155.5ms | ActiveRecord: 0.9ms | Allocations: 23364)
+
+
+Started POST "/users/6/organizations" for ::1 at 2020-09-16 12:27:57 -0500
+Processing by OrganizationsController#create as HTML
+  Parameters: {"authenticity_token"=>"ylK+WHQ32LR7P9EvkdyPj2BovdaaDnSaTjmtenMTdDZaMux/8rYOhbMZt2MB2YHWpaauId95Fn5H4+BO50DXzg==", "organization"=>{"name"=>"test", "hourlyrate"=>"3"}, "commit"=>"Create Organization", "user_id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms | Allocations: 2728)
+
+
+  
+NoMethodError (undefined method `organization' for #<User:0x00007fbebefea8d8>
+Did you mean?  organizations
+               organizations=):
+  
+app/controllers/organizations_controller.rb:4:in `create'
+Started POST "/users/6/organizations" for ::1 at 2020-09-16 12:28:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OrganizationsController#create as HTML
+  Parameters: {"authenticity_token"=>"ylK+WHQ32LR7P9EvkdyPj2BovdaaDnSaTjmtenMTdDZaMux/8rYOhbMZt2MB2YHWpaauId95Fn5H4+BO50DXzg==", "organization"=>{"name"=>"test", "hourlyrate"=>"3"}, "commit"=>"Create Organization", "user_id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.7ms | Allocations: 104961)
+
+
+  
+NameError (undefined local variable or method `organization_params' for #<OrganizationsController:0x00007fbec26efc48>):
+  
+app/controllers/organizations_controller.rb:4:in `create'
+Started GET "/users/6" for ::1 at 2020-09-16 12:28:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 18.8ms | Allocations: 6492)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 41.9ms | ActiveRecord: 1.7ms | Allocations: 11328)
+
+
+Started POST "/users/6/organizations" for ::1 at 2020-09-16 12:28:53 -0500
+Processing by OrganizationsController#create as HTML
+  Parameters: {"authenticity_token"=>"aWFHsn3xSMt/smfUB3HG85RmOys9raL1YdmpKx6SuL4OelXQ/0SUrJUFFLi6qD6RuimQD4ka0qEkH5HZtX/WuA==", "organization"=>{"name"=>"1", "hourlyrate"=>"5"}, "commit"=>"Create Organization", "user_id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 0.1ms | Allocations: 98935)
+
+
+  
+NameError (undefined local variable or method `organization_params' for #<OrganizationsController:0x00007fbec61c3658>):
+  
+app/controllers/organizations_controller.rb:4:in `create'
+Started POST "/users/6/organizations" for ::1 at 2020-09-16 12:29:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OrganizationsController#create as HTML
+  Parameters: {"authenticity_token"=>"aWFHsn3xSMt/smfUB3HG85RmOys9raL1YdmpKx6SuL4OelXQ/0SUrJUFFLi6qD6RuimQD4ka0qEkH5HZtX/WuA==", "organization"=>{"name"=>"1", "hourlyrate"=>"5"}, "commit"=>"Create Organization", "user_id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:3:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/organizations_controller.rb:4:in `create'
+  [1m[36mOrganization Create (0.9ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "hourlyrate", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "1"], ["hourlyrate", 5.0], ["user_id", 6], ["created_at", "2020-09-16 17:29:16.708665"], ["updated_at", "2020-09-16 17:29:16.708665"]]
+  ↳ app/controllers/organizations_controller.rb:4:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/organizations_controller.rb:4:in `create'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 33ms (ActiveRecord: 4.1ms | Allocations: 14180)
+
+
+Started GET "/users/6" for ::1 at 2020-09-16 12:29:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.3ms | Allocations: 6864)
+
+
+Started GET "/users/6" for ::1 at 2020-09-16 12:30:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2038)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.3ms | Allocations: 7680)
+
+
+Started POST "/users/6/organizations" for ::1 at 2020-09-16 12:30:46 -0500
+Processing by OrganizationsController#create as HTML
+  Parameters: {"authenticity_token"=>"4+MML2EuZic3yoGC3q2HZbL+B1Aj7tmMwcZJWRrc8B5zg14I56+wFv/s585OqIk8dzAUp2aZu2jIHARtjo9T5g==", "organization"=>{"name"=>"test", "hourlyrate"=>"2.50"}, "commit"=>"Create Organization", "user_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:3:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/organizations_controller.rb:4:in `create'
+  [1m[36mOrganization Create (0.7ms)[0m  [1m[32mINSERT INTO "organizations" ("name", "hourlyrate", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "test"], ["hourlyrate", 2.5], ["user_id", 6], ["created_at", "2020-09-16 17:30:46.305781"], ["updated_at", "2020-09-16 17:30:46.305781"]]
+  ↳ app/controllers/organizations_controller.rb:4:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/organizations_controller.rb:4:in `create'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms | Allocations: 3654)
+
+
+Started GET "/users/6" for ::1 at 2020-09-16 12:30:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1691)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.4ms | Allocations: 6401)
+
+
+Started GET "/users/6" for ::1 at 2020-09-16 12:31:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2078)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.3ms | Allocations: 7714)
+
+
+Started GET "/users" for ::1 at 2020-09-16 12:32:04 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1582)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms | Allocations: 5896)
+
+
+Started GET "/users/new" for ::1 at 2020-09-16 12:32:07 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.4ms | Allocations: 1506)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 6166)
+
+
+Started GET "/login" for ::1 at 2020-09-16 12:32:08 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 558)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 5235)
+
+
+Started GET "/users/new" for ::1 at 2020-09-16 12:32:10 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 7.4ms | Allocations: 1109)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.0ms | Allocations: 5366)
+
+
+Started POST "/users" for ::1 at 2020-09-16 12:33:01 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"oOVvjV40Q3f6yEUQSYmb/VWIWTfjaiTVbZpRjOKGPJJY7shgydPH+SIXBY3Z04oylo5YvwLIjz7CqzkShMo5+w==", "user"=>{"name"=>"e", "email"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "e"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "e"], ["email", "e"], ["password_digest", "$2a$12$WGCizPcjXtGq86RYmzF1uu7IdZ9L.VNEWotNim./Xxjmh32e9qOYS"], ["created_at", "2020-09-16 17:33:01.875075"], ["updated_at", "2020-09-16 17:33:01.875075"]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 261ms (ActiveRecord: 2.4ms | Allocations: 4222)
+
+
+Started GET "/users/7" for ::1 at 2020-09-16 12:33:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2059)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.3ms | Allocations: 7703)
+
+
+Started GET "/users/7" for ::1 at 2020-09-16 12:37:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2016)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms | Allocations: 3761)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    24: <% end %>
+    25:  
+    26: <h2>Add an Organization:</h2>
+    27: <%= form_with(model: [ @organization ], local: true) do |form| %>
+    28:   <p>
+    29:     <%= form.label :name %><br>
+    30:     <%= form.text_field :name %>
+  
+app/views/users/show.html.erb:27
+Started GET "/users/7" for ::1 at 2020-09-16 12:37:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2380)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 4129)
+
+
+  
+ActionView::Template::Error (undefined method `build' for nil:NilClass):
+    24: <% end %>
+    25:  
+    26: <h2>Add an Organization:</h2>
+    27: <%= form_with(model: [ @organization.build ], local: true) do |form| %>
+    28:   <p>
+    29:     <%= form.label :name %><br>
+    30:     <%= form.text_field :name %>
+  
+app/views/users/show.html.erb:27
+Started GET "/users/7" for ::1 at 2020-09-16 12:37:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1652)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 3401)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11: </p>
+    12: 
+    13: <h2>Organizations</h2>
+    14: <% @organization.each do |organization| %>
+    15:   <p>
+    16:     <strong>Name:</strong>
+    17:     <%= organization.name %>
+  
+app/views/users/show.html.erb:14
+Started GET "/users/7" for ::1 at 2020-09-16 12:38:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1654)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 3403)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11: </p>
+    12: 
+    13: <h2>Organizations</h2>
+    14: <% @organizations.each do |organization| %>
+    15:   <p>
+    16:     <strong>Name:</strong>
+    17:     <%= organization.name %>
+  
+app/views/users/show.html.erb:14
