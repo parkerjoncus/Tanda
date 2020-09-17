@@ -7,9 +7,10 @@
   </p>
 </p>
 
-
 <% if @user.organizations.count > 0 %>
-  <h1>Add current user organization</h1>
+  <%= @user.organizations.each do |organization| %>
+    <h1><%= organization.name %></h1>
+  <% end %>
 <% else %>
   <p>
       You aren't a memeber of any organizations. Join an existing one or create a new one.
@@ -22,7 +23,7 @@
         <li>
           <%= organization.name %>
           <%= link_to 'Edit', edit_user_organization_path(organization) %>
-          Join
+          <%= link_to 'Join', edit_user_organization_path(organization) %>
         </li>
       </ul>
     <% end %>
