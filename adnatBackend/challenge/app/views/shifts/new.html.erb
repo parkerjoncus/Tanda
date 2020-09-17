@@ -25,18 +25,25 @@
             <%= user.name %>
           </td>
           <td style="border: 1px solid black">
+            <%= shift.start.strftime('%B %d, %Y') %>
           </td>
           <td style="border: 1px solid black">
-            <%= shift.start %>
+            <%= shift.start.strftime('%H:%M') %>
           </td>
           <td style="border: 1px solid black">
-            <%= shift.finish %>
+            <%= shift.finish.strftime('%H:%M') %>
           </td>
           <td style="border: 1px solid black">
             <%= shift.breaklength %>
           </td>
-          <td style="border: 1px solid black">Hours worked</td>
-          <td style="border: 1px solid black">Shift cost</td>
+          <td style="border: 1px solid black">
+            <%= ((shift.finish - shift.start)/3600) - shift.breaklength/60 %>
+          </td>
+          <td style="border: 1px solid black">
+            <% user.organizations.each do |organization| %>
+              <%= organization.hourlyrate * ((shift.finish - shift.start)/3600) - shift.breaklength/60 %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     <% end %>
@@ -55,7 +62,7 @@
         <%= form.time_select :finish %>
       </td>
       <td style="border: 1px solid black">
-        <%= form.number_field :breaklength %>
+        <%= form.number_field :breaklength, :value => 0 %>
       </td>
       <td style="border: 1px solid black">
           <%= form.submit %>
@@ -63,4 +70,4 @@
     </tr>
   <% end %>
 </table>
-  
+<%= link_to 'Back', user_path(@user) %>

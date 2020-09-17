@@ -2,7 +2,6 @@ class ShiftsController < ApplicationController
     def new
         @user = User.find(params[:user_id])
         @users = User.all
-        @shift = Shift.new
     end
     
     def create
@@ -16,6 +15,17 @@ class ShiftsController < ApplicationController
         redirect_to user_path(@user)
     end
     
+    def edit
+        destroy
+    end
+
+    def destroy
+        @shift = shift.find(params[:user_id])
+        @user = User.find(params[:id])
+        
+        @shift.destroy
+        redirect_to user_path(@user)
+    end
     private
         def shift_params
             params.require(:shift).permit(:start, :finish, :breaklength)
