@@ -1,0 +1,15 @@
+<h2>Edit Organization:</h2>
+<%= form_with(model: @organization, url: user_organization_path, local: false) do |form| %>
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :hourly_rate %> $
+    <%= form.number_field :hourlyrate, step: 0.1 %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+  <%= link_to 'Delete', user_organization_path(@organization), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

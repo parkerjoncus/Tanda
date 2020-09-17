@@ -1,41 +1,47 @@
-<p id="notice"><%= notice %></p>
+<h1>Adnat</h1>
 
 <p>
-  <strong>Name:</strong>
+  <p>Logged in as:
   <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
 </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
 
-<h2>Organizations</h2>
-<% @user.organizations.each do |organization| %>
+<% if @user.organizations.count > 0 %>
+  <h1>Add current user organization</h1>
+<% else %>
   <p>
-    <strong>Name:</strong>
-    <%= organization.name %>
+      You aren't a memeber of any organizations. Join an existing one or create a new one.
   </p>
- 
-  <p>
-    <strong>Hourly Rate:</strong>
-    <%= organization.hourlyrate %>
-  </p>
-<% end %>
- 
-<h2>Add an Organization:</h2>
-<%= form_with(model: [ @user, @user.organizations.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
-  <p>
-    <%= form.label :hourly_rate %><br>
-    <%= form.number_field :hourlyrate, step: 0.1 %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+
+  <h2>Organizations</h2>
+  <% @users.each do |user| %>
+    <% user.organizations.each do |organization| %>
+      <ul>
+        <li>
+          <%= organization.name %>
+          <%= link_to 'Edit', edit_user_organization_path(organization) %>
+          Join
+        </li>
+      </ul>
+    <% end %>
+  <% end %>
+   
+  <h2>Create Organization:</h2>
+  <%= form_with(model: [ @user, @user.organizations.build ], local: true) do |form| %>
+    <p>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </p>
+    <p>
+      <%= form.label :hourly_rate %> $
+      <%= form.number_field :hourlyrate, step: 0.1 %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
 <% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
