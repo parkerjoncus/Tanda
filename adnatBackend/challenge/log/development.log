@@ -16147,3 +16147,3297 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.7ms | Allocations: 6337)
 
 
+Started GET "/users" for ::1 at 2020-09-17 14:19:35 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4098)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.6ms | Allocations: 8244)
+
+
+Started GET "/users/14/edit" for ::1 at 2020-09-17 14:19:38 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 16.6ms | Allocations: 5958)
+  Rendered users/edit.html.erb within layouts/application (Duration: 19.4ms | Allocations: 6358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.2ms | Allocations: 11088)
+
+
+Started GET "/users" for ::1 at 2020-09-17 14:19:39 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 4101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 1.0ms | Allocations: 8253)
+
+
+Started GET "/users/14" for ::1 at 2020-09-17 14:19:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1625)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 15.2ms | ActiveRecord: 0.8ms | Allocations: 6327)
+
+
+Started GET "/users/14/edit" for ::1 at 2020-09-17 14:19:41 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.9ms | Allocations: 1147)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1264)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 23.0ms | ActiveRecord: 0.9ms | Allocations: 5951)
+
+
+Started GET "/users" for ::1 at 2020-09-17 14:19:42 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4098)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 1.0ms | Allocations: 8248)
+
+
+Started GET "/users/6" for ::1 at 2020-09-17 14:19:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5535)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 1.0ms | Allocations: 10239)
+
+
+Started GET "/users" for ::1 at 2020-09-17 14:20:21 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4098)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.7ms | Allocations: 8250)
+
+
+Started GET "/users/7" for ::1 at 2020-09-17 14:20:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/show.html.erb:20
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:21
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 5532)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 1.0ms | Allocations: 10233)
+
+
+Started GET "/users/2/organizations/7" for ::1 at 2020-09-17 14:20:28 -0500
+Processing by OrganizationsController#show as HTML
+  Parameters: {"user_id"=>"2", "id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `show'
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/organizations_controller.rb:15:in `show'
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/organizations_controller.rb:15:in `show'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/organizations_controller.rb:15:in `show'
+  [1m[36mOrganization Update (0.8ms)[0m  [1m[33mUPDATE "organizations" SET "user_id" = ?, "updated_at" = ? WHERE "organizations"."id" = ?[0m  [["user_id", 7], ["updated_at", "2020-09-17 19:20:28.162611"], ["id", 2]]
+  ↳ app/controllers/organizations_controller.rb:15:in `show'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/organizations_controller.rb:15:in `show'
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 14ms (ActiveRecord: 2.6ms | Allocations: 4897)
+
+
+Started GET "/users/7" for ::1 at 2020-09-17 14:20:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1623)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.5ms | Allocations: 6332)
+
+
+Started GET "/users" for ::1 at 2020-09-17 14:20:30 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4098)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.7ms | Allocations: 8251)
+
+
+Started GET "/users/7" for ::1 at 2020-09-17 14:21:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1624)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 0.6ms | Allocations: 6320)
+
+
+Started GET "/users/7" for ::1 at 2020-09-17 14:21:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.7ms | Allocations: 7789)
+
+
+Started GET "/users/7" for ::1 at 2020-09-17 14:22:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2258)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.7ms | Allocations: 7885)
+
+
+Started GET "/users/7" for ::1 at 2020-09-17 14:23:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2409)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.5ms | Allocations: 8037)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShifts (20200917192634)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "shifts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "start" datetime, "finish" datetime, "breaklength" integer, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b1a30da2b8"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shifts_on_user_id" ON "shifts" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200917192634"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/7" for ::1 at 2020-09-17 14:36:12 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 35.1ms | Allocations: 10843)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 308ms (Views: 276.6ms | ActiveRecord: 1.9ms | Allocations: 47321)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:36:14 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 18.4ms | ActiveRecord: 1.3ms | Allocations: 10706)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:44:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 32.6ms | Allocations: 5129)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.3ms | Allocations: 6893)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table>
+  <tr>
+    <th>Employee Name</th>
+    <th>Shift Date</th>
+    <th>Start Time</th>
+    <th>Finish Time</th>
+    <th>Break Length (Minutes)</th>
+    <th>Hours worked</th>
+    <th>Shift cost</th>
+  </tr>
+  <% @user.each do |user| %>
+    <user.shift.each do |shift| %>
+      <tr>
+        <td>Employee Name</th>
+        <td>Shift Date</th>
+        <td>Start Time</th>
+        <td>Finish Time</th>
+        <td>Break Length (Minutes)</th>
+        <td>Hours worked</th>
+        <td>Shift cost</th>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+  
+
+):
+1:    <style>
+2:    table, th, td {
+3:      border: 1px solid black;
+4:    }
+5:    </style>
+6:    <h1>Adnat</h1>
+7:    
+8:    <p>
+9:      <p>Logged in as:
+10:      <%= @user.name %>
+11:      <%= link_to 'Log out', logout_path %>
+12:      </p>
+13:    </p>
+14:    
+15:    <h2>Shifts</h2>
+16:    <table>
+17:      <tr>
+18:        <th>Employee Name</th>
+19:        <th>Shift Date</th>
+20:        <th>Start Time</th>
+21:        <th>Finish Time</th>
+22:        <th>Break Length (Minutes)</th>
+23:        <th>Hours worked</th>
+24:        <th>Shift cost</th>
+25:      </tr>
+26:      <% @user.each do |user| %>
+27:        <user.shift.each do |shift| %>
+28:          <tr>
+29:            <td>Employee Name</th>
+30:            <td>Shift Date</th>
+31:            <td>Start Time</th>
+32:            <td>Finish Time</th>
+33:            <td>Break Length (Minutes)</th>
+34:            <td>Hours worked</th>
+35:            <td>Shift cost</th>
+36:          </tr>
+37:        <% end %>
+38:      <% end %>
+39:    </table>
+40:      
+  
+app/views/shifts/new.html.erb:43: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:43: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:43: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:43: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:43: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:43: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/7" for ::1 at 2020-09-17 14:45:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 512.2ms | Allocations: 2415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1426ms (Views: 1398.9ms | ActiveRecord: 5.0ms | Allocations: 8207)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:45:47 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1113)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 2683)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr>
+    <th>Employee Name</th>
+    <th>Shift Date</th>
+    <th>Start Time</th>
+    <th>Finish Time</th>
+    <th>Break Length (Minutes)</th>
+    <th>Hours worked</th>
+    <th>Shift cost</th>
+  </tr>
+  <% @user.each do |user| %>
+    <user.shift.each do |shift| %>
+      <tr>
+        <td>Employee Name</th>
+        <td>Shift Date</th>
+        <td>Start Time</th>
+        <td>Finish Time</th>
+        <td>Break Length (Minutes)</th>
+        <td>Hours worked</th>
+        <td>Shift cost</th>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table style="border: 1px solid black">
+12:      <tr>
+13:        <th>Employee Name</th>
+14:        <th>Shift Date</th>
+15:        <th>Start Time</th>
+16:        <th>Finish Time</th>
+17:        <th>Break Length (Minutes)</th>
+18:        <th>Hours worked</th>
+19:        <th>Shift cost</th>
+20:      </tr>
+21:      <% @user.each do |user| %>
+22:        <user.shift.each do |shift| %>
+23:          <tr>
+24:            <td>Employee Name</th>
+25:            <td>Shift Date</th>
+26:            <td>Start Time</th>
+27:            <td>Finish Time</th>
+28:            <td>Break Length (Minutes)</th>
+29:            <td>Hours worked</th>
+30:            <td>Shift cost</th>
+31:          </tr>
+32:        <% end %>
+33:      <% end %>
+34:    </table>
+35:      
+  
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:46:07 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1108)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 2840)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table>
+  <tr>
+    <th>Employee Name</th>
+    <th>Shift Date</th>
+    <th>Start Time</th>
+    <th>Finish Time</th>
+    <th>Break Length (Minutes)</th>
+    <th>Hours worked</th>
+    <th>Shift cost</th>
+  </tr>
+  <% @user.each do |user| %>
+    <user.shift.each do |shift| %>
+      <tr>
+        <td>Employee Name</th>
+        <td>Shift Date</th>
+        <td>Start Time</th>
+        <td>Finish Time</th>
+        <td>Break Length (Minutes)</th>
+        <td>Hours worked</th>
+        <td>Shift cost</th>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table>
+12:      <tr>
+13:        <th>Employee Name</th>
+14:        <th>Shift Date</th>
+15:        <th>Start Time</th>
+16:        <th>Finish Time</th>
+17:        <th>Break Length (Minutes)</th>
+18:        <th>Hours worked</th>
+19:        <th>Shift cost</th>
+20:      </tr>
+21:      <% @user.each do |user| %>
+22:        <user.shift.each do |shift| %>
+23:          <tr>
+24:            <td>Employee Name</th>
+25:            <td>Shift Date</th>
+26:            <td>Start Time</th>
+27:            <td>Finish Time</th>
+28:            <td>Break Length (Minutes)</th>
+29:            <td>Hours worked</th>
+30:            <td>Shift cost</th>
+31:          </tr>
+32:        <% end %>
+33:      <% end %>
+34:    </table>
+35:      
+  
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:38: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:46:17 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.1ms | Allocations: 5869)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:46:40 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.2ms | Allocations: 5866)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:46:41 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.1ms | Allocations: 4797)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:47:10 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.1ms | Allocations: 5861)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:47:34 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.2ms | Allocations: 5868)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:47:59 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.5ms | Allocations: 5870)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:48:20 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.1ms | Allocations: 5890)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:48:34 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.2ms | Allocations: 5871)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:57:05 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1302)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms | Allocations: 3054)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr style="border: 1px solid black">
+    <th style="border: 1px solid black">Employee Name</th>
+    <th style="border: 1px solid black">Shift Date</th>
+    <th style="border: 1px solid black">Start Time</th>
+    <th style="border: 1px solid black">Finish Time</th>
+    <th style="border: 1px solid black">Break Length (Minutes)</th>
+    <th style="border: 1px solid black">Hours worked</th>
+    <th style="border: 1px solid black">Shift cost</th>
+  </tr>
+  <% @users.each do |user| %>
+    <% user.shifts.each do |shift|
+      <tr style="border: 1px solid black">
+        <td style="border: 1px solid black">Employee Name</td>
+        <td style="border: 1px solid black">Shift Date</td>
+        <td style="border: 1px solid black">Start Time</td>
+        <td style="border: 1px solid black">Finish Time</td>
+        <td style="border: 1px solid black">Break Length (Minutes)</td>
+        <td style="border: 1px solid black">Hours worked</td>
+        <td style="border: 1px solid black">Shift cost</td>
+      </tr>
+    <% end %>
+  <% end %>
+  <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form %>
+    <td style="border: 1px solid black">
+      <%= form.label :name %>
+    </td>
+    <td style="border: 1px solid black">
+      <%= form.date_field :date %>
+    </td>
+    <td style="border: 1px solid black">
+      <%= form.time_field :starttime %>
+    </td>
+    <td style="border: 1px solid black">
+      <%= form.time_field :endtime %>
+    </td>
+    <td style="border: 1px solid black">
+      <%= form.number_field :breaklength %>
+    </td>
+    <td style="border: 1px solid black">
+        <%= form.submit %>
+    </td>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table style="border: 1px solid black">
+12:      <tr style="border: 1px solid black">
+13:        <th style="border: 1px solid black">Employee Name</th>
+14:        <th style="border: 1px solid black">Shift Date</th>
+15:        <th style="border: 1px solid black">Start Time</th>
+16:        <th style="border: 1px solid black">Finish Time</th>
+17:        <th style="border: 1px solid black">Break Length (Minutes)</th>
+18:        <th style="border: 1px solid black">Hours worked</th>
+19:        <th style="border: 1px solid black">Shift cost</th>
+20:      </tr>
+21:      <% @users.each do |user| %>
+22:        <% user.shifts.each do |shift|
+23:          <tr style="border: 1px solid black">
+24:            <td style="border: 1px solid black">Employee Name</td>
+25:            <td style="border: 1px solid black">Shift Date</td>
+26:            <td style="border: 1px solid black">Start Time</td>
+27:            <td style="border: 1px solid black">Finish Time</td>
+28:            <td style="border: 1px solid black">Break Length (Minutes)</td>
+29:            <td style="border: 1px solid black">Hours worked</td>
+30:            <td style="border: 1px solid black">Shift cost</td>
+31:          </tr>
+32:        <% end %>
+33:      <% end %>
+34:      <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form %>
+35:        <td style="border: 1px solid black">
+36:          <%= form.label :name %>
+37:        </td>
+38:        <td style="border: 1px solid black">
+39:          <%= form.date_field :date %>
+40:        </td>
+41:        <td style="border: 1px solid black">
+42:          <%= form.time_field :starttime %>
+43:        </td>
+44:        <td style="border: 1px solid black">
+45:          <%= form.time_field :endtime %>
+46:        </td>
+47:        <td style="border: 1px solid black">
+48:          <%= form.number_field :breaklength %>
+49:        </td>
+50:        <td style="border: 1px solid black">
+51:            <%= form.submit %>
+52:        </td>
+53:      <% end %>
+54:    </table>
+55:      
+  
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:58: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:58: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:58: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:58: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:58: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:53: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:58: syntax error, unexpected end, expecting ')'
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:58:35 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1292)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 3030)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr style="border: 1px solid black">
+    <th style="border: 1px solid black">Employee Name</th>
+    <th style="border: 1px solid black">Shift Date</th>
+    <th style="border: 1px solid black">Start Time</th>
+    <th style="border: 1px solid black">Finish Time</th>
+    <th style="border: 1px solid black">Break Length (Minutes)</th>
+    <th style="border: 1px solid black">Hours worked</th>
+    <th style="border: 1px solid black">Shift cost</th>
+  </tr>
+  <% @users.each do |user| %>
+    <% user.shifts.each do |shift|
+      <tr style="border: 1px solid black">
+        <td style="border: 1px solid black">Employee Name</td>
+        <td style="border: 1px solid black">Shift Date</td>
+        <td style="border: 1px solid black">Start Time</td>
+        <td style="border: 1px solid black">Finish Time</td>
+        <td style="border: 1px solid black">Break Length (Minutes)</td>
+        <td style="border: 1px solid black">Hours worked</td>
+        <td style="border: 1px solid black">Shift cost</td>
+      </tr>
+    <% end %>
+  <% end %>
+  <tr style="border: 1px solid black">
+    <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form %>
+      <td style="border: 1px solid black">
+        <%= form.label :name %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.date_field :date %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_field :starttime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_field :endtime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.number_field :breaklength %>
+      </td>
+      <td style="border: 1px solid black">
+          <%= form.submit %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table style="border: 1px solid black">
+12:      <tr style="border: 1px solid black">
+13:        <th style="border: 1px solid black">Employee Name</th>
+14:        <th style="border: 1px solid black">Shift Date</th>
+15:        <th style="border: 1px solid black">Start Time</th>
+16:        <th style="border: 1px solid black">Finish Time</th>
+17:        <th style="border: 1px solid black">Break Length (Minutes)</th>
+18:        <th style="border: 1px solid black">Hours worked</th>
+19:        <th style="border: 1px solid black">Shift cost</th>
+20:      </tr>
+21:      <% @users.each do |user| %>
+22:        <% user.shifts.each do |shift|
+23:          <tr style="border: 1px solid black">
+24:            <td style="border: 1px solid black">Employee Name</td>
+25:            <td style="border: 1px solid black">Shift Date</td>
+26:            <td style="border: 1px solid black">Start Time</td>
+27:            <td style="border: 1px solid black">Finish Time</td>
+28:            <td style="border: 1px solid black">Break Length (Minutes)</td>
+29:            <td style="border: 1px solid black">Hours worked</td>
+30:            <td style="border: 1px solid black">Shift cost</td>
+31:          </tr>
+32:        <% end %>
+33:      <% end %>
+34:      <tr style="border: 1px solid black">
+35:        <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form %>
+36:          <td style="border: 1px solid black">
+37:            <%= form.label :name %>
+38:          </td>
+39:          <td style="border: 1px solid black">
+40:            <%= form.date_field :date %>
+41:          </td>
+42:          <td style="border: 1px solid black">
+43:            <%= form.time_field :starttime %>
+44:          </td>
+45:          <td style="border: 1px solid black">
+46:            <%= form.time_field :endtime %>
+47:          </td>
+48:          <td style="border: 1px solid black">
+49:            <%= form.number_field :breaklength %>
+50:          </td>
+51:          <td style="border: 1px solid black">
+52:              <%= form.submit %>
+53:          </td>
+54:        </tr>
+55:      <% end %>
+56:    </table>
+57:      
+  
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+Started GET "/users/6" for ::1 at 2020-09-17 14:58:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/show.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (Duration: 49.6ms | Allocations: 11878)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 67.0ms | ActiveRecord: 1.8ms | Allocations: 17310)
+
+
+Started GET "/users" for ::1 at 2020-09-17 14:58:53 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4445)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.9ms | Allocations: 8801)
+
+
+Started GET "/users/7" for ::1 at 2020-09-17 14:58:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1798)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 6558)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:58:55 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1279)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 2273)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr style="border: 1px solid black">
+    <th style="border: 1px solid black">Employee Name</th>
+    <th style="border: 1px solid black">Shift Date</th>
+    <th style="border: 1px solid black">Start Time</th>
+    <th style="border: 1px solid black">Finish Time</th>
+    <th style="border: 1px solid black">Break Length (Minutes)</th>
+    <th style="border: 1px solid black">Hours worked</th>
+    <th style="border: 1px solid black">Shift cost</th>
+  </tr>
+  <% @users.each do |user| %>
+    <% user.shifts.each do |shift|
+      <tr style="border: 1px solid black">
+        <td style="border: 1px solid black">Employee Name</td>
+        <td style="border: 1px solid black">Shift Date</td>
+        <td style="border: 1px solid black">Start Time</td>
+        <td style="border: 1px solid black">Finish Time</td>
+        <td style="border: 1px solid black">Break Length (Minutes)</td>
+        <td style="border: 1px solid black">Hours worked</td>
+        <td style="border: 1px solid black">Shift cost</td>
+      </tr>
+    <% end %>
+  <% end %>
+  <tr style="border: 1px solid black">
+    <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form %>
+      <td style="border: 1px solid black">
+        <%= form.label :name %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.date_field :date %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_field :starttime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_field :endtime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.number_field :breaklength %>
+      </td>
+      <td style="border: 1px solid black">
+          <%= form.submit %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table style="border: 1px solid black">
+12:      <tr style="border: 1px solid black">
+13:        <th style="border: 1px solid black">Employee Name</th>
+14:        <th style="border: 1px solid black">Shift Date</th>
+15:        <th style="border: 1px solid black">Start Time</th>
+16:        <th style="border: 1px solid black">Finish Time</th>
+17:        <th style="border: 1px solid black">Break Length (Minutes)</th>
+18:        <th style="border: 1px solid black">Hours worked</th>
+19:        <th style="border: 1px solid black">Shift cost</th>
+20:      </tr>
+21:      <% @users.each do |user| %>
+22:        <% user.shifts.each do |shift|
+23:          <tr style="border: 1px solid black">
+24:            <td style="border: 1px solid black">Employee Name</td>
+25:            <td style="border: 1px solid black">Shift Date</td>
+26:            <td style="border: 1px solid black">Start Time</td>
+27:            <td style="border: 1px solid black">Finish Time</td>
+28:            <td style="border: 1px solid black">Break Length (Minutes)</td>
+29:            <td style="border: 1px solid black">Hours worked</td>
+30:            <td style="border: 1px solid black">Shift cost</td>
+31:          </tr>
+32:        <% end %>
+33:      <% end %>
+34:      <tr style="border: 1px solid black">
+35:        <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form %>
+36:          <td style="border: 1px solid black">
+37:            <%= form.label :name %>
+38:          </td>
+39:          <td style="border: 1px solid black">
+40:            <%= form.date_field :date %>
+41:          </td>
+42:          <td style="border: 1px solid black">
+43:            <%= form.time_field :starttime %>
+44:          </td>
+45:          <td style="border: 1px solid black">
+46:            <%= form.time_field :endtime %>
+47:          </td>
+48:          <td style="border: 1px solid black">
+49:            <%= form.number_field :breaklength %>
+50:          </td>
+51:          <td style="border: 1px solid black">
+52:              <%= form.submit %>
+53:          </td>
+54:        </tr>
+55:      <% end %>
+56:    </table>
+57:      
+  
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:55: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting ')'
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 14:59:14 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1197)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 2933)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr style="border: 1px solid black">
+    <th style="border: 1px solid black">Employee Name</th>
+    <th style="border: 1px solid black">Shift Date</th>
+    <th style="border: 1px solid black">Start Time</th>
+    <th style="border: 1px solid black">Finish Time</th>
+    <th style="border: 1px solid black">Break Length (Minutes)</th>
+    <th style="border: 1px solid black">Hours worked</th>
+    <th style="border: 1px solid black">Shift cost</th>
+  </tr>
+  <tr style="border: 1px solid black">
+    <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form %>
+      <td style="border: 1px solid black">
+        <%= form.label :name %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.date_field :date %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_field :starttime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_field :endtime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.number_field :breaklength %>
+      </td>
+      <td style="border: 1px solid black">
+          <%= form.submit %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table style="border: 1px solid black">
+12:      <tr style="border: 1px solid black">
+13:        <th style="border: 1px solid black">Employee Name</th>
+14:        <th style="border: 1px solid black">Shift Date</th>
+15:        <th style="border: 1px solid black">Start Time</th>
+16:        <th style="border: 1px solid black">Finish Time</th>
+17:        <th style="border: 1px solid black">Break Length (Minutes)</th>
+18:        <th style="border: 1px solid black">Hours worked</th>
+19:        <th style="border: 1px solid black">Shift cost</th>
+20:      </tr>
+21:      <tr style="border: 1px solid black">
+22:        <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form %>
+23:          <td style="border: 1px solid black">
+24:            <%= form.label :name %>
+25:          </td>
+26:          <td style="border: 1px solid black">
+27:            <%= form.date_field :date %>
+28:          </td>
+29:          <td style="border: 1px solid black">
+30:            <%= form.time_field :starttime %>
+31:          </td>
+32:          <td style="border: 1px solid black">
+33:            <%= form.time_field :endtime %>
+34:          </td>
+35:          <td style="border: 1px solid black">
+36:            <%= form.number_field :breaklength %>
+37:          </td>
+38:          <td style="border: 1px solid black">
+39:              <%= form.submit %>
+40:          </td>
+41:        </tr>
+42:      <% end %>
+43:    </table>
+44:      
+  
+app/views/shifts/new.html.erb:22: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:22: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:22: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:22: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:22: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:22: syntax error, unexpected ')', expecting '|'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:47: syntax error, unexpected end, expecting ')'
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:00:11 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1294)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 3030)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr style="border: 1px solid black">
+    <th style="border: 1px solid black">Employee Name</th>
+    <th style="border: 1px solid black">Shift Date</th>
+    <th style="border: 1px solid black">Start Time</th>
+    <th style="border: 1px solid black">Finish Time</th>
+    <th style="border: 1px solid black">Break Length (Minutes)</th>
+    <th style="border: 1px solid black">Hours worked</th>
+    <th style="border: 1px solid black">Shift cost</th>
+  </tr>
+  <% @users.each do |user| %>
+    <% user.shifts.each do |shift|
+      <tr style="border: 1px solid black">
+        <td style="border: 1px solid black">Employee Name</td>
+        <td style="border: 1px solid black">Shift Date</td>
+        <td style="border: 1px solid black">Start Time</td>
+        <td style="border: 1px solid black">Finish Time</td>
+        <td style="border: 1px solid black">Break Length (Minutes)</td>
+        <td style="border: 1px solid black">Hours worked</td>
+        <td style="border: 1px solid black">Shift cost</td>
+      </tr>
+    <% end %>
+  <% end %>
+  <tr style="border: 1px solid black">
+    <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form| %>
+      <td style="border: 1px solid black">
+        <%= form.label :name %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.date_field :date %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_field :starttime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_field :endtime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.number_field :breaklength %>
+      </td>
+      <td style="border: 1px solid black">
+          <%= form.submit %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table style="border: 1px solid black">
+12:      <tr style="border: 1px solid black">
+13:        <th style="border: 1px solid black">Employee Name</th>
+14:        <th style="border: 1px solid black">Shift Date</th>
+15:        <th style="border: 1px solid black">Start Time</th>
+16:        <th style="border: 1px solid black">Finish Time</th>
+17:        <th style="border: 1px solid black">Break Length (Minutes)</th>
+18:        <th style="border: 1px solid black">Hours worked</th>
+19:        <th style="border: 1px solid black">Shift cost</th>
+20:      </tr>
+21:      <% @users.each do |user| %>
+22:        <% user.shifts.each do |shift|
+23:          <tr style="border: 1px solid black">
+24:            <td style="border: 1px solid black">Employee Name</td>
+25:            <td style="border: 1px solid black">Shift Date</td>
+26:            <td style="border: 1px solid black">Start Time</td>
+27:            <td style="border: 1px solid black">Finish Time</td>
+28:            <td style="border: 1px solid black">Break Length (Minutes)</td>
+29:            <td style="border: 1px solid black">Hours worked</td>
+30:            <td style="border: 1px solid black">Shift cost</td>
+31:          </tr>
+32:        <% end %>
+33:      <% end %>
+34:      <tr style="border: 1px solid black">
+35:        <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form| %>
+36:          <td style="border: 1px solid black">
+37:            <%= form.label :name %>
+38:          </td>
+39:          <td style="border: 1px solid black">
+40:            <%= form.date_field :date %>
+41:          </td>
+42:          <td style="border: 1px solid black">
+43:            <%= form.time_field :starttime %>
+44:          </td>
+45:          <td style="border: 1px solid black">
+46:            <%= form.time_field :endtime %>
+47:          </td>
+48:          <td style="border: 1px solid black">
+49:            <%= form.number_field :breaklength %>
+50:          </td>
+51:          <td style="border: 1px solid black">
+52:              <%= form.submit %>
+53:          </td>
+54:        </tr>
+55:      <% end %>
+56:    </table>
+57:      
+  
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:23: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:24: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:25: unknown regexp options - td
+app/views/shifts/new.html.erb:26: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:26: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:27: unknown regexp options - td
+app/views/shifts/new.html.erb:28: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:29: unknown regexp options - td
+app/views/shifts/new.html.erb:30: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:31: unknown regexp options - tr
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:35: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:60: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:00:26 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 47.9ms | Allocations: 6752)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 77.4ms | ActiveRecord: 0.2ms | Allocations: 12343)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:01:44 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1690)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 3419)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    18:     <th style="border: 1px solid black">Hours worked</th>
+    19:     <th style="border: 1px solid black">Shift cost</th>
+    20:   </tr>
+    21:     <% @users.each do |user| %>
+    22:       <% user.shifts.each do |shift| %>
+    23:         <tr style="border: 1px solid black">
+    24:           <td style="border: 1px solid black">Employee Name</td>
+  
+app/views/shifts/new.html.erb:21
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:02:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5905)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 28.7ms | ActiveRecord: 2.8ms | Allocations: 21737)
+
+
+Started POST "/users/7/shifts" for ::1 at 2020-09-17 15:04:08 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"hJmsRmBEce6iK39zq4MTKUfQPvaIBVZHXmaXxx4OXt8+dOsvgrVZJe5frB52jeB4K5JzwQXfS7SV7olpUUFIzQ==", "shift"=>{"date"=>"59900", "starttime"=>"32532", "endtime"=>"234324", "breaklength"=>"7"}, "commit"=>"Create Shift", "user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+[31mUnpermitted parameters: :date, :starttime, :endtime[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:10:in `create'
+  [1m[36mShift Create (2.0ms)[0m  [1m[32mINSERT INTO "shifts" ("breaklength", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["breaklength", 7], ["user_id", 7], ["created_at", "2020-09-17 20:04:08.576518"], ["updated_at", "2020-09-17 20:04:08.576518"]]
+  ↳ app/controllers/shifts_controller.rb:10:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:10:in `create'
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 10ms (ActiveRecord: 3.5ms | Allocations: 3909)
+
+
+Started GET "/users/7" for ::1 at 2020-09-17 15:04:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 14.7ms | Allocations: 7945)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 1.4ms | Allocations: 13244)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:04:11 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4472)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.8ms | Allocations: 9240)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:04:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 5974)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 19.8ms | ActiveRecord: 2.4ms | Allocations: 21537)
+
+
+Started POST "/users/7/shifts" for ::1 at 2020-09-17 15:04:48 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"s7knYhbsdr4CWApqShbpCGdvN6o9+j02SV0LJGizh3oJVGAL9B1edU4s2QeXGBpZCy16nbAgIMWC1RWKJ/yRaA==", "shift"=>{"date"=>"545", "starttime"=>"5454", "endtime"=>"5454", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+[31mUnpermitted parameters: :date, :starttime, :endtime[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:10:in `create'
+  [1m[36mShift Create (0.6ms)[0m  [1m[32mINSERT INTO "shifts" ("breaklength", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["breaklength", 3], ["user_id", 7], ["created_at", "2020-09-17 20:04:48.894525"], ["updated_at", "2020-09-17 20:04:48.894525"]]
+  ↳ app/controllers/shifts_controller.rb:10:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 2.7ms | Allocations: 101970)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3bb17df20>):
+  
+app/controllers/shifts_controller.rb:11:in `create'
+Started POST "/users/7/shifts" for ::1 at 2020-09-17 15:05:58 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"s7knYhbsdr4CWApqShbpCGdvN6o9+j02SV0LJGizh3oJVGAL9B1edU4s2QeXGBpZCy16nbAgIMWC1RWKJ/yRaA==", "shift"=>{"date"=>"545", "starttime"=>"5454", "endtime"=>"5454", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+[31mUnpermitted parameters: :date, :starttime, :endtime[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[36mShift Create (0.6ms)[0m  [1m[32mINSERT INTO "shifts" ("breaklength", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["breaklength", 3], ["user_id", 7], ["created_at", "2020-09-17 20:05:59.046202"], ["updated_at", "2020-09-17 20:05:59.046202"]]
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 4.2ms | Allocations: 115576)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3bb24c410>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/44f3e12fd2a882e569b32b8731803126" for ::1 at 2020-09-17 15:06:00 -0500
+Started PUT "/__web_console/repl_sessions/44f3e12fd2a882e569b32b8731803126" for ::1 at 2020-09-17 15:06:01 -0500
+Started POST "/users/7/shifts" for ::1 at 2020-09-17 15:06:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"s7knYhbsdr4CWApqShbpCGdvN6o9+j02SV0LJGizh3oJVGAL9B1edU4s2QeXGBpZCy16nbAgIMWC1RWKJ/yRaA==", "shift"=>{"date"=>"545", "starttime"=>"5454", "endtime"=>"5454", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+[31mUnpermitted parameters: :date, :starttime, :endtime[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[36mShift Create (0.5ms)[0m  [1m[32mINSERT INTO "shifts" ("breaklength", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["breaklength", 3], ["user_id", 7], ["created_at", "2020-09-17 20:06:16.989361"], ["updated_at", "2020-09-17 20:06:16.989361"]]
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 3.8ms | Allocations: 113959)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3b7fb6a78>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/b63350acb8a4b837ada7e5f09395f31a" for ::1 at 2020-09-17 15:06:19 -0500
+Started PUT "/__web_console/repl_sessions/b63350acb8a4b837ada7e5f09395f31a" for ::1 at 2020-09-17 15:06:21 -0500
+Started POST "/users/7/shifts" for ::1 at 2020-09-17 15:07:24 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"s7knYhbsdr4CWApqShbpCGdvN6o9+j02SV0LJGizh3oJVGAL9B1edU4s2QeXGBpZCy16nbAgIMWC1RWKJ/yRaA==", "shift"=>{"date"=>"545", "starttime"=>"5454", "endtime"=>"5454", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+[31mUnpermitted parameters: :date, :starttime, :endtime[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[36mShift Create (0.5ms)[0m  [1m[32mINSERT INTO "shifts" ("breaklength", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["breaklength", 3], ["user_id", 7], ["created_at", "2020-09-17 20:07:24.736145"], ["updated_at", "2020-09-17 20:07:24.736145"]]
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 2.8ms | Allocations: 101912)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3b7c5d9d0>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:07:33 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 315.7ms | Allocations: 153662)
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 1.0ms | Allocations: 155409)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007ff3b7d11570>:0x00007ff3b4e0c6d0>):
+    37:         <%= form.label :name %>
+    38:       </td>
+    39:       <td style="border: 1px solid black">
+    40:         <%= f.date_field :date, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+    41:       </td>
+    42:       <td style="border: 1px solid black">
+    43:         <%= form.time_field :starttime %>
+  
+app/views/shifts/new.html.erb:40
+app/views/shifts/new.html.erb:35
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:07:50 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 5065)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.9ms | Allocations: 10764)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:07:56 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4542)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.8ms | Allocations: 9310)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:09:05 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.5ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 4920)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 1.3ms | Allocations: 10609)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:09:06 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 4529)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 1.2ms | Allocations: 9298)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:09:07 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4521)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.0ms | Allocations: 9288)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:09:08 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4521)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 1.1ms | Allocations: 9289)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:09:56 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 80.9ms | Allocations: 10557)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 97.0ms | ActiveRecord: 1.2ms | Allocations: 16157)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:10:35 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 31.5ms | Allocations: 11228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 51.8ms | ActiveRecord: 2.2ms | Allocations: 16827)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:10:48 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 8617)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.9ms | Allocations: 14314)
+
+
+Started POST "/users/7/shifts" for ::1 at 2020-09-17 15:11:05 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"Qu/zqXHWCgUF+BfSBToyIU5Y0eJ1cqNXLI3bC7dVmgr4ArTAkycizkmMxL/YNMFwIhqc1fiovqTnBcWl+BqMGA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"20", "starttime(5i)"=>"10", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"20", "endtime(5i)"=>"10", "breaklength"=>"1"}, "commit"=>"Create Shift", "user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+[31mUnpermitted parameters: :date(1i), :date(2i), :date(3i), :starttime(1i), :starttime(2i), :starttime(3i), :starttime(4i), :starttime(5i), :endtime(1i), :endtime(2i), :endtime(3i), :endtime(4i), :endtime(5i)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[36mShift Create (0.5ms)[0m  [1m[32mINSERT INTO "shifts" ("breaklength", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["breaklength", 1], ["user_id", 7], ["created_at", "2020-09-17 20:11:05.389738"], ["updated_at", "2020-09-17 20:11:05.389738"]]
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 2.6ms | Allocations: 102398)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3b41c3c98>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/156dd5d6ea9be7ce9e4fd3199c8a2248" for ::1 at 2020-09-17 15:11:26 -0500
+Started PUT "/__web_console/repl_sessions/156dd5d6ea9be7ce9e4fd3199c8a2248" for ::1 at 2020-09-17 15:11:27 -0500
+Started PUT "/__web_console/repl_sessions/156dd5d6ea9be7ce9e4fd3199c8a2248" for ::1 at 2020-09-17 15:11:29 -0500
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:12:02 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 18.3ms | Allocations: 8241)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 1.4ms | Allocations: 13009)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:12:47 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 8665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 1.0ms | Allocations: 14360)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:13:11 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 5171)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms | Allocations: 6915)
+
+
+  
+ActionView::Template::Error (undefined method `date' for #<Shift:0x00007ff3bb17da20>
+Did you mean?  update):
+    25:             <%= user.name %>
+    26:           </td>
+    27:           <td style="border: 1px solid black">
+    28:             <%= shift.date %>
+    29:           </td>
+    30:           <td style="border: 1px solid black">Start Time</td>
+    31:           <td style="border: 1px solid black">Finish Time</td>
+  
+app/views/shifts/new.html.erb:28
+app/views/shifts/new.html.erb:22
+app/views/shifts/new.html.erb:21
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:13:48 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1325)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 3074)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr style="border: 1px solid black">
+    <th style="border: 1px solid black">Employee Name</th>
+    <th style="border: 1px solid black">Shift Date</th>
+    <th style="border: 1px solid black">Start Time</th>
+    <th style="border: 1px solid black">Finish Time</th>
+    <th style="border: 1px solid black">Break Length (Minutes)</th>
+    <th style="border: 1px solid black">Hours worked</th>
+    <th style="border: 1px solid black">Shift cost</th>
+  </tr>
+    <% @users.each do |user| %>
+      <% user.shifts.each do |shift| %>
+        <tr style="border: 1px solid black">
+          <td style="border: 1px solid black">
+            <%= user.name %>
+          </td>
+          <td style="border: 1px solid black">
+            Date
+          </td>
+          <td style="border: 1px solid black">Start Time
+            <%= shift.start
+          </td>
+          <td style="border: 1px solid black">Finish Time</td>
+          <td style="border: 1px solid black">Break Length (Minutes)</td>
+          <td style="border: 1px solid black">Hours worked</td>
+          <td style="border: 1px solid black">Shift cost</td>
+        </tr>
+      <% end %>
+    <% end %>
+  <tr style="border: 1px solid black">
+    <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form| %>
+      <td style="border: 1px solid black">
+        <%= form.label :name %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.date_select :date, class: 'form-control' %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_select :starttime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_select :endtime %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.number_field :breaklength %>
+      </td>
+      <td style="border: 1px solid black">
+          <%= form.submit %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table style="border: 1px solid black">
+12:      <tr style="border: 1px solid black">
+13:        <th style="border: 1px solid black">Employee Name</th>
+14:        <th style="border: 1px solid black">Shift Date</th>
+15:        <th style="border: 1px solid black">Start Time</th>
+16:        <th style="border: 1px solid black">Finish Time</th>
+17:        <th style="border: 1px solid black">Break Length (Minutes)</th>
+18:        <th style="border: 1px solid black">Hours worked</th>
+19:        <th style="border: 1px solid black">Shift cost</th>
+20:      </tr>
+21:        <% @users.each do |user| %>
+22:          <% user.shifts.each do |shift| %>
+23:            <tr style="border: 1px solid black">
+24:              <td style="border: 1px solid black">
+25:                <%= user.name %>
+26:              </td>
+27:              <td style="border: 1px solid black">
+28:                Date
+29:              </td>
+30:              <td style="border: 1px solid black">Start Time
+31:                <%= shift.start
+32:              </td>
+33:              <td style="border: 1px solid black">Finish Time</td>
+34:              <td style="border: 1px solid black">Break Length (Minutes)</td>
+35:              <td style="border: 1px solid black">Hours worked</td>
+36:              <td style="border: 1px solid black">Shift cost</td>
+37:            </tr>
+38:          <% end %>
+39:        <% end %>
+40:      <tr style="border: 1px solid black">
+41:        <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form| %>
+42:          <td style="border: 1px solid black">
+43:            <%= form.label :name %>
+44:          </td>
+45:          <td style="border: 1px solid black">
+46:            <%= form.date_select :date, class: 'form-control' %>
+47:          </td>
+48:          <td style="border: 1px solid black">
+49:            <%= form.time_select :starttime %>
+50:          </td>
+51:          <td style="border: 1px solid black">
+52:            <%= form.time_select :endtime %>
+53:          </td>
+54:          <td style="border: 1px solid black">
+55:            <%= form.number_field :breaklength %>
+56:          </td>
+57:          <td style="border: 1px solid black">
+58:              <%= form.submit %>
+59:          </td>
+60:        </tr>
+61:      <% end %>
+62:    </table>
+63:      
+  
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/shifts/new.html.erb:33: unknown regexp options - td
+app/views/shifts/new.html.erb:34: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:35: unknown regexp options - td
+app/views/shifts/new.html.erb:36: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:37: unknown regexp options - tr
+app/views/shifts/new.html.erb:38: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:41: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:66: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/shifts/new.html.erb:33: unknown regexp options - td
+app/views/shifts/new.html.erb:34: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:35: unknown regexp options - td
+app/views/shifts/new.html.erb:36: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:37: unknown regexp options - tr
+app/views/shifts/new.html.erb:38: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:41: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:66: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/shifts/new.html.erb:33: unknown regexp options - td
+app/views/shifts/new.html.erb:34: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:35: unknown regexp options - td
+app/views/shifts/new.html.erb:36: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:37: unknown regexp options - tr
+app/views/shifts/new.html.erb:38: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:41: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:66: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/shifts/new.html.erb:33: unknown regexp options - td
+app/views/shifts/new.html.erb:34: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:35: unknown regexp options - td
+app/views/shifts/new.html.erb:36: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:37: unknown regexp options - tr
+app/views/shifts/new.html.erb:38: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:41: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:66: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/shifts/new.html.erb:33: unknown regexp options - td
+app/views/shifts/new.html.erb:34: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:35: unknown regexp options - td
+app/views/shifts/new.html.erb:36: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:37: unknown regexp options - tr
+app/views/shifts/new.html.erb:38: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:41: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:66: syntax error, unexpected end, expecting end-of-input
+app/views/shifts/new.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/shifts/new.html.erb:33: unknown regexp options - td
+app/views/shifts/new.html.erb:34: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:34: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/shifts/new.html.erb:35: unknown regexp options - td
+app/views/shifts/new.html.erb:36: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/shifts/new.html.erb:37: unknown regexp options - tr
+app/views/shifts/new.html.erb:38: syntax error, unexpected '<'
+app/views/shifts/new.html.erb:41: syntax error, unexpected do (for block), expecting end
+app/views/shifts/new.html.erb:66: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:14:01 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 8693)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 1.0ms | Allocations: 14402)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:14:04 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 8261)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.9ms | Allocations: 13024)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:14:18 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 8691)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.9ms | Allocations: 14389)
+
+
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:15:19 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 15.8ms | Allocations: 8758)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 1.0ms | Allocations: 14455)
+
+
+Started POST "/users/7/shifts" for ::1 at 2020-09-17 15:15:38 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"MPDzqGjXPKYK1Ph3+eHz3iNGPW/OVYj46A+wDw7elGqKHbTBiiYUbUagKxok7wCPTwRwWEOPlQsjh66hQZGCeA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"20", "starttime(5i)"=>"15", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"20", "endtime(5i)"=>"15", "breaklength"=>"1"}, "commit"=>"Create Shift", "user_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+[31mUnpermitted parameters: :date(1i), :date(2i), :date(3i), :starttime(1i), :starttime(2i), :starttime(3i), :starttime(4i), :starttime(5i), :endtime(1i), :endtime(2i), :endtime(3i), :endtime(4i), :endtime(5i)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[36mShift Create (0.5ms)[0m  [1m[32mINSERT INTO "shifts" ("breaklength", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["breaklength", 1], ["user_id", 7], ["created_at", "2020-09-17 20:15:38.325668"], ["updated_at", "2020-09-17 20:15:38.325668"]]
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 2.6ms | Allocations: 102395)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3bb36d1a0>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/9aab9f7fc479e733ac380f99ef01135e" for ::1 at 2020-09-17 15:15:47 -0500
+Started PUT "/__web_console/repl_sessions/9aab9f7fc479e733ac380f99ef01135e" for ::1 at 2020-09-17 15:15:51 -0500
+Started POST "/users/7/shifts" for ::1 at 2020-09-17 15:17:11 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+        year = shiftData[:date(1i)]
+                              ^
+/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+...       month = shiftData[:date(2i)]
+...                              ^
+/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+        day = shiftData[:date(3i)]
+                             ^):
+  
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+Started PUT "/__web_console/repl_sessions/967591c02254e5c358a6d99e8b6533dd" for ::1 at 2020-09-17 15:17:21 -0500
+Started PUT "/__web_console/repl_sessions/967591c02254e5c358a6d99e8b6533dd" for ::1 at 2020-09-17 15:17:22 -0500
+Started PUT "/__web_console/repl_sessions/967591c02254e5c358a6d99e8b6533dd" for ::1 at 2020-09-17 15:17:24 -0500
+Started PUT "/__web_console/repl_sessions/967591c02254e5c358a6d99e8b6533dd" for ::1 at 2020-09-17 15:17:26 -0500
+Started PUT "/__web_console/repl_sessions/967591c02254e5c358a6d99e8b6533dd" for ::1 at 2020-09-17 15:17:27 -0500
+Started PUT "/__web_console/repl_sessions/967591c02254e5c358a6d99e8b6533dd" for ::1 at 2020-09-17 15:17:38 -0500
+Started PUT "/__web_console/repl_sessions/967591c02254e5c358a6d99e8b6533dd" for ::1 at 2020-09-17 15:17:40 -0500
+Started GET "/users/7/shifts/new" for ::1 at 2020-09-17 15:17:44 -0500
+  
+SyntaxError (/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+        year = shiftData[:date(1i)]
+                              ^
+/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+...       month = shiftData[:date(2i)]
+...                              ^
+/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+        day = shiftData[:date(3i)]
+                             ^):
+  
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+Started GET "/users" for ::1 at 2020-09-17 15:17:47 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 14233)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 40.3ms | ActiveRecord: 2.2ms | Allocations: 20527)
+
+
+Started GET "/users/14" for ::1 at 2020-09-17 15:17:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2380)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 0.7ms | Allocations: 7408)
+
+
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:17:52 -0500
+  
+SyntaxError (/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+        year = shiftData[:date(1i)]
+                              ^
+/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+...       month = shiftData[:date(2i)]
+...                              ^
+/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+        day = shiftData[:date(3i)]
+                             ^):
+  
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:11: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:12: syntax error, unexpected '(', expecting ']'
+app/controllers/shifts_controller.rb:13: syntax error, unexpected '(', expecting ']'
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:18:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 9829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 25.1ms | ActiveRecord: 2.4ms | Allocations: 25399)
+
+
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:18:27 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"aSgh371Mjt6AvFRCYxbBZdP4ez+pQDrcdD2uy04lWrS7TbdeorVSH+pf6skpwreiy5rG7GsQbiEwY6g+nFo9dg==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"20", "starttime(5i)"=>"18", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"20", "endtime(5i)"=>"18", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 0.3ms | Allocations: 99434)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3b7f6e9a8>):
+  
+app/controllers/shifts_controller.rb:11:in `create'
+Started PUT "/__web_console/repl_sessions/1f6475d1530e034e5bea54e6688568b1" for ::1 at 2020-09-17 15:18:34 -0500
+Started PUT "/__web_console/repl_sessions/1f6475d1530e034e5bea54e6688568b1" for ::1 at 2020-09-17 15:18:35 -0500
+Started PUT "/__web_console/repl_sessions/1f6475d1530e034e5bea54e6688568b1" for ::1 at 2020-09-17 15:20:38 -0500
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:23:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 9829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 32.6ms | ActiveRecord: 2.9ms | Allocations: 25393)
+
+
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:23:58 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"yQOariY637Op4fu3uJsMAumUXsZk+pAcfDEcvVTh05obZgwvOcMDcsMCRTzyT3rF8fbjFaaqxOE4bxpIhp60WA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"20", "starttime(5i)"=>"23", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"20", "endtime(5i)"=>"23", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 0.1ms | Allocations: 99438)
+
+
+  
+NameError (undefined local variable or method `event' for #<ShiftsController:0x00007ff3bb3a4970>):
+  
+app/controllers/shifts_controller.rb:11:in `create'
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:24:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"yQOariY637Op4fu3uJsMAumUXsZk+pAcfDEcvVTh05obZgwvOcMDcsMCRTzyT3rF8fbjFaaqxOE4bxpIhp60WA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"20", "starttime(5i)"=>"23", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"20", "endtime(5i)"=>"23", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 0.8ms | Allocations: 105237)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3bb3d5958>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/ffe32a3177f14b626d6f466b8b28b2d7" for ::1 at 2020-09-17 15:24:19 -0500
+Started PUT "/__web_console/repl_sessions/ffe32a3177f14b626d6f466b8b28b2d7" for ::1 at 2020-09-17 15:24:19 -0500
+Started PUT "/__web_console/repl_sessions/ffe32a3177f14b626d6f466b8b28b2d7" for ::1 at 2020-09-17 15:26:47 -0500
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:27:16 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 9809)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 46.0ms | ActiveRecord: 2.1ms | Allocations: 22964)
+
+
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:27:28 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KYi9M/SFPl8LRNpHgF5HAnTz4WdaSbQuYMVlMLOk0YCw7R10CvIOBbOreJU1Q/bEbFyVl85ci393RNhELH0hA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"04", "starttime(5i)"=>"00", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"12", "endtime(5i)"=>"00", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 0.1ms | Allocations: 99435)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3bb325170>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/9ea78aeb3fc933a317abd7ba4cb6a369" for ::1 at 2020-09-17 15:27:33 -0500
+Started PUT "/__web_console/repl_sessions/9ea78aeb3fc933a317abd7ba4cb6a369" for ::1 at 2020-09-17 15:27:34 -0500
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:28:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KYi9M/SFPl8LRNpHgF5HAnTz4WdaSbQuYMVlMLOk0YCw7R10CvIOBbOreJU1Q/bEbFyVl85ci393RNhELH0hA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"04", "starttime(5i)"=>"00", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"12", "endtime(5i)"=>"00", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.1ms | Allocations: 8665)
+
+
+  
+NameError (uninitialized constant ShiftsController::TIme
+Did you mean?  Time):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:28:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KYi9M/SFPl8LRNpHgF5HAnTz4WdaSbQuYMVlMLOk0YCw7R10CvIOBbOreJU1Q/bEbFyVl85ci393RNhELH0hA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"04", "starttime(5i)"=>"00", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"12", "endtime(5i)"=>"00", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms | Allocations: 7020)
+
+
+  
+ArgumentError (mon out of range):
+  
+app/controllers/shifts_controller.rb:12:in `initialize'
+app/controllers/shifts_controller.rb:12:in `new'
+app/controllers/shifts_controller.rb:12:in `create'
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:29:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KYi9M/SFPl8LRNpHgF5HAnTz4WdaSbQuYMVlMLOk0YCw7R10CvIOBbOreJU1Q/bEbFyVl85ci393RNhELH0hA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"04", "starttime(5i)"=>"00", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"12", "endtime(5i)"=>"00", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.0ms | Allocations: 6972)
+
+
+  
+ArgumentError (wrong number of arguments (given 5, expected 0..4)):
+  
+app/controllers/shifts_controller.rb:11:in `initialize'
+app/controllers/shifts_controller.rb:11:in `new'
+app/controllers/shifts_controller.rb:11:in `create'
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:29:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KYi9M/SFPl8LRNpHgF5HAnTz4WdaSbQuYMVlMLOk0YCw7R10CvIOBbOreJU1Q/bEbFyVl85ci393RNhELH0hA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"04", "starttime(5i)"=>"00", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"12", "endtime(5i)"=>"00", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.8ms | Allocations: 105186)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3b419a208>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/e5b175af345953b8fe4342690b67d091" for ::1 at 2020-09-17 15:29:56 -0500
+Started PUT "/__web_console/repl_sessions/e5b175af345953b8fe4342690b67d091" for ::1 at 2020-09-17 15:29:56 -0500
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:30:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KYi9M/SFPl8LRNpHgF5HAnTz4WdaSbQuYMVlMLOk0YCw7R10CvIOBbOreJU1Q/bEbFyVl85ci393RNhELH0hA==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"9", "date(3i)"=>"17", "starttime(1i)"=>"2020", "starttime(2i)"=>"9", "starttime(3i)"=>"17", "starttime(4i)"=>"04", "starttime(5i)"=>"00", "endtime(1i)"=>"2020", "endtime(2i)"=>"9", "endtime(3i)"=>"17", "endtime(4i)"=>"12", "endtime(5i)"=>"00", "breaklength"=>"3"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 0.8ms | Allocations: 105187)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3bd0849c8>):
+  
+app/controllers/shifts_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/f30e8b7b32a6f695b3359ef36c635540" for ::1 at 2020-09-17 15:30:56 -0500
+Started PUT "/__web_console/repl_sessions/f30e8b7b32a6f695b3359ef36c635540" for ::1 at 2020-09-17 15:30:58 -0500
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:32:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 10230)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 31.2ms | ActiveRecord: 2.3ms | Allocations: 26566)
+
+
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:32:41 -0500
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"ygQWuRzudgmffydZt56+/5fZl/G4FSPffPPbaA4g7xwYYYA4AxeqyPWcmdL9Ssg4j7sqInpFdyI4rd2d3F+I3g==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"1", "date(3i)"=>"1", "start(1i)"=>"2020", "start(2i)"=>"9", "start(3i)"=>"17", "start(4i)"=>"10", "start(5i)"=>"30", "finish(1i)"=>"2020", "finish(2i)"=>"9", "finish(3i)"=>"17", "finish(4i)"=>"15", "finish(5i)"=>"30", "breaklength"=>"30"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 0.2ms | Allocations: 99455)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3bb0ed7b8>):
+  
+app/controllers/shifts_controller.rb:13:in `create'
+Started PUT "/__web_console/repl_sessions/d937f854ea2be02a2d92d8f2193914eb" for ::1 at 2020-09-17 15:32:45 -0500
+Started PUT "/__web_console/repl_sessions/d937f854ea2be02a2d92d8f2193914eb" for ::1 at 2020-09-17 15:32:45 -0500
+Started PUT "/__web_console/repl_sessions/d937f854ea2be02a2d92d8f2193914eb" for ::1 at 2020-09-17 15:32:48 -0500
+Started PUT "/__web_console/repl_sessions/d937f854ea2be02a2d92d8f2193914eb" for ::1 at 2020-09-17 15:33:44 -0500
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:34:43 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"ygQWuRzudgmffydZt56+/5fZl/G4FSPffPPbaA4g7xwYYYA4AxeqyPWcmdL9Ssg4j7sqInpFdyI4rd2d3F+I3g==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"1", "date(3i)"=>"1", "start(1i)"=>"2020", "start(2i)"=>"9", "start(3i)"=>"17", "start(4i)"=>"10", "start(5i)"=>"30", "finish(1i)"=>"2020", "finish(2i)"=>"9", "finish(3i)"=>"17", "finish(4i)"=>"15", "finish(5i)"=>"30", "breaklength"=>"30"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 0.8ms | Allocations: 105261)
+
+
+  
+NameError (undefined local variable or method `organization' for #<ShiftsController:0x00007ff3bb08fe60>):
+  
+app/controllers/shifts_controller.rb:15:in `create'
+Started PUT "/__web_console/repl_sessions/318e661ffd90c6153941a7a6e519a1a5" for ::1 at 2020-09-17 15:34:46 -0500
+Started PUT "/__web_console/repl_sessions/318e661ffd90c6153941a7a6e519a1a5" for ::1 at 2020-09-17 15:34:47 -0500
+Started POST "/users/14/shifts" for ::1 at 2020-09-17 15:35:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#create as HTML
+  Parameters: {"authenticity_token"=>"ygQWuRzudgmffydZt56+/5fZl/G4FSPffPPbaA4g7xwYYYA4AxeqyPWcmdL9Ssg4j7sqInpFdyI4rd2d3F+I3g==", "shift"=>{"date(1i)"=>"2020", "date(2i)"=>"1", "date(3i)"=>"1", "start(1i)"=>"2020", "start(2i)"=>"9", "start(3i)"=>"17", "start(4i)"=>"10", "start(5i)"=>"30", "finish(1i)"=>"2020", "finish(2i)"=>"9", "finish(3i)"=>"17", "finish(4i)"=>"15", "finish(5i)"=>"30", "breaklength"=>"30"}, "commit"=>"Create Shift", "user_id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:9:in `create'
+[31mUnpermitted parameters: :date(1i), :date(2i), :date(3i)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:15:in `create'
+  [1m[36mShift Create (0.9ms)[0m  [1m[32mINSERT INTO "shifts" ("start", "finish", "breaklength", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["start", "2020-09-17 10:30:00"], ["finish", "2020-09-17 15:30:00"], ["breaklength", 30], ["user_id", 14], ["created_at", "2020-09-17 20:35:02.199618"], ["updated_at", "2020-09-17 20:35:02.199618"]]
+  ↳ app/controllers/shifts_controller.rb:15:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:15:in `create'
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 44ms (ActiveRecord: 3.7ms | Allocations: 15797)
+
+
+Started GET "/users/14" for ::1 at 2020-09-17 15:35:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 8035)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 1.2ms | Allocations: 13337)
+
+
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:35:04 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 8714)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.9ms | Allocations: 13641)
+
+
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:36:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4824)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.9ms | Allocations: 17305)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    25:             <%= user.name %>
+    26:           </td>
+    27:           <td style="border: 1px solid black">
+    28:             <%= Date.parse(shift.start).strftime("%d-%m-%Y") %>
+    29:           </td>
+    30:           <td style="border: 1px solid black">
+    31:             <%= shift.start %>
+  
+app/views/shifts/new.html.erb:28:in `parse'
+app/views/shifts/new.html.erb:28
+app/views/shifts/new.html.erb:22
+app/views/shifts/new.html.erb:21
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:38:32 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 4019)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms | Allocations: 5765)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007ff3bb454848>::Html):
+    25:             <%= user.name %>
+    26:           </td>
+    27:           <td style="border: 1px solid black">
+    28:             <%= Html.Encode(String.Format("{0:MM/dd/yyyy}", shift.start)) %>
+    29:           </td>
+    30:           <td style="border: 1px solid black">
+    31:             <%= shift.start %>
+  
+app/views/shifts/new.html.erb:28
+app/views/shifts/new.html.erb:22
+app/views/shifts/new.html.erb:21
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:39:29 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1365)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 3112)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr style="border: 1px solid black">
+    <th style="border: 1px solid black">Employee Name</th>
+    <th style="border: 1px solid black">Shift Date</th>
+    <th style="border: 1px solid black">Start Time</th>
+    <th style="border: 1px solid black">Finish Time</th>
+    <th style="border: 1px solid black">Break Length (Minutes)</th>
+    <th style="border: 1px solid black">Hours worked</th>
+    <th style="border: 1px solid black">Shift cost</th>
+  </tr>
+    <% @users.each do |user| %>
+      <% user.shifts.each do |shift| %>
+        <tr style="border: 1px solid black">
+          <td style="border: 1px solid black">
+            <%= user.name %>
+          </td>
+          <td style="border: 1px solid black">
+            <%= Html.Encode(shift.start.ToShortDateString() %>
+          </td>
+          <td style="border: 1px solid black">
+            <%= shift.start %>
+          </td>
+          <td style="border: 1px solid black">
+            <%= shift.finish %>
+          </td>
+          <td style="border: 1px solid black">
+            <%= shift.breaklength %>
+          </td>
+          <td style="border: 1px solid black">Hours worked</td>
+          <td style="border: 1px solid black">Shift cost</td>
+        </tr>
+      <% end %>
+    <% end %>
+  <tr style="border: 1px solid black">
+    <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form| %>
+      <td style="border: 1px solid black">
+        <%= form.label :name %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.date_select :date, class: 'form-control' %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_select :start %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_select :finish %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.number_field :breaklength %>
+      </td>
+      <td style="border: 1px solid black">
+          <%= form.submit %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+  
+
+):
+1:    <h1>Adnat</h1>
+2:    
+3:    <p>
+4:      <p>Logged in as:
+5:      <%= @user.name %>
+6:      <%= link_to 'Log out', logout_path %>
+7:      </p>
+8:    </p>
+9:    
+10:    <h2>Shifts</h2>
+11:    <table style="border: 1px solid black">
+12:      <tr style="border: 1px solid black">
+13:        <th style="border: 1px solid black">Employee Name</th>
+14:        <th style="border: 1px solid black">Shift Date</th>
+15:        <th style="border: 1px solid black">Start Time</th>
+16:        <th style="border: 1px solid black">Finish Time</th>
+17:        <th style="border: 1px solid black">Break Length (Minutes)</th>
+18:        <th style="border: 1px solid black">Hours worked</th>
+19:        <th style="border: 1px solid black">Shift cost</th>
+20:      </tr>
+21:        <% @users.each do |user| %>
+22:          <% user.shifts.each do |shift| %>
+23:            <tr style="border: 1px solid black">
+24:              <td style="border: 1px solid black">
+25:                <%= user.name %>
+26:              </td>
+27:              <td style="border: 1px solid black">
+28:                <%= Html.Encode(shift.start.ToShortDateString() %>
+29:              </td>
+30:              <td style="border: 1px solid black">
+31:                <%= shift.start %>
+32:              </td>
+33:              <td style="border: 1px solid black">
+34:                <%= shift.finish %>
+35:              </td>
+36:              <td style="border: 1px solid black">
+37:                <%= shift.breaklength %>
+38:              </td>
+39:              <td style="border: 1px solid black">Hours worked</td>
+40:              <td style="border: 1px solid black">Shift cost</td>
+41:            </tr>
+42:          <% end %>
+43:        <% end %>
+44:      <tr style="border: 1px solid black">
+45:        <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form| %>
+46:          <td style="border: 1px solid black">
+47:            <%= form.label :name %>
+48:          </td>
+49:          <td style="border: 1px solid black">
+50:            <%= form.date_select :date, class: 'form-control' %>
+51:          </td>
+52:          <td style="border: 1px solid black">
+53:            <%= form.time_select :start %>
+54:          </td>
+55:          <td style="border: 1px solid black">
+56:            <%= form.time_select :finish %>
+57:          </td>
+58:          <td style="border: 1px solid black">
+59:            <%= form.number_field :breaklength %>
+60:          </td>
+61:          <td style="border: 1px solid black">
+62:              <%= form.submit %>
+63:          </td>
+64:        </tr>
+65:      <% end %>
+66:    </table>
+67:      
+  
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:70: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:70: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:70: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:70: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:70: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/shifts/new.html.erb:70: syntax error, unexpected end, expecting ')'
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:39:53 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.1ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 4012)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms | Allocations: 5758)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007ff3b7fac640>::Html):
+    25:             <%= user.name %>
+    26:           </td>
+    27:           <td style="border: 1px solid black">
+    28:             <%= Html.Encode(shift.start.ToShortDateString()) %>
+    29:           </td>
+    30:           <td style="border: 1px solid black">
+    31:             <%= shift.start %>
+  
+app/views/shifts/new.html.erb:28
+app/views/shifts/new.html.erb:22
+app/views/shifts/new.html.erb:21
+Started GET "/users/14/shifts/new" for ::1 at 2020-09-17 15:40:05 -0500
+Processing by ShiftsController#new as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:3:in `new'
+  Rendering shifts/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/shifts/new.html.erb:21
+  [1m[36mShift Load (0.9ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/shifts/new.html.erb:22
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts" WHERE "shifts"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/shifts/new.html.erb:22
+  Rendered shifts/new.html.erb within layouts/application (Duration: 22.5ms | Allocations: 8974)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 1.9ms | Allocations: 14673)
+
+

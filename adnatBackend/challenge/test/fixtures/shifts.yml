@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2020-09-17 14:26:34
+  finish: 2020-09-17 14:26:34
+  breaklength: 1
+  user: one
+
+two:
+  start: 2020-09-17 14:26:34
+  finish: 2020-09-17 14:26:34
+  breaklength: 1
+  user: two

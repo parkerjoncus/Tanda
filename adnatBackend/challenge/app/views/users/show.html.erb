@@ -10,6 +10,9 @@
 <% if @user.organizations.count > 0 %>
   <%= @user.organizations.each do |organization| %>
     <h1><%= organization.name %></h1>
+    <%= link_to 'View Shifts', new_user_shift_path(@user) %>
+    <%= link_to 'Edit', edit_user_organization_path(organization) %>
+    <%= link_to 'Leave', edit_user_organization_path(organization) %>
   <% end %>
 <% else %>
   <p>
@@ -44,6 +47,6 @@
     </p>
   <% end %>
 <% end %>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<br>
+<%= link_to 'Edit', edit_user_organization_path(@user) %> |
 <%= link_to 'Back', users_path %>

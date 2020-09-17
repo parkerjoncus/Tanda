@@ -1,0 +1,66 @@
+<h1>Adnat</h1>
+
+<p>
+  <p>Logged in as:
+  <%= @user.name %>
+  <%= link_to 'Log out', logout_path %>
+  </p>
+</p>
+
+<h2>Shifts</h2>
+<table style="border: 1px solid black">
+  <tr style="border: 1px solid black">
+    <th style="border: 1px solid black">Employee Name</th>
+    <th style="border: 1px solid black">Shift Date</th>
+    <th style="border: 1px solid black">Start Time</th>
+    <th style="border: 1px solid black">Finish Time</th>
+    <th style="border: 1px solid black">Break Length (Minutes)</th>
+    <th style="border: 1px solid black">Hours worked</th>
+    <th style="border: 1px solid black">Shift cost</th>
+  </tr>
+    <% @users.each do |user| %>
+      <% user.shifts.each do |shift| %>
+        <tr style="border: 1px solid black">
+          <td style="border: 1px solid black">
+            <%= user.name %>
+          </td>
+          <td style="border: 1px solid black">
+          </td>
+          <td style="border: 1px solid black">
+            <%= shift.start %>
+          </td>
+          <td style="border: 1px solid black">
+            <%= shift.finish %>
+          </td>
+          <td style="border: 1px solid black">
+            <%= shift.breaklength %>
+          </td>
+          <td style="border: 1px solid black">Hours worked</td>
+          <td style="border: 1px solid black">Shift cost</td>
+        </tr>
+      <% end %>
+    <% end %>
+  <tr style="border: 1px solid black">
+    <%= form_with(model: [ @user, @user.shifts.build ], local: true) do |form| %>
+      <td style="border: 1px solid black">
+        <%= form.label :name %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.date_select :date, class: 'form-control' %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_select :start %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.time_select :finish %>
+      </td>
+      <td style="border: 1px solid black">
+        <%= form.number_field :breaklength %>
+      </td>
+      <td style="border: 1px solid black">
+          <%= form.submit %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+  
