@@ -23,6 +23,8 @@ I attempted this challenge for a job prospect. This was the first time I used Ru
 15. The shift chart is not based on the organization. I instead just printed every users shift. I did this becuase of the issues in #1 and #3. Since only one user could be in one organization it seemed ridicuous to print every user in a single organization since it would just be the one user. If #1 and #3 were fixed, this would not be hard to fix.
 16. Users can create duplicate organizations. They can be duplicated if the name is the same and if both the name and hourly rate is the same. 
 17. You can quickly add a new user on the all users page. Again this was more fore quick testing purposes. 
+
+If there are any other issues that I missed please let me know!
  
  ### Resources
  Getting Started with rails. This was a good place for me to start and quickly learn ruby on rails. https://guides.rubyonrails.org/getting_started.html
