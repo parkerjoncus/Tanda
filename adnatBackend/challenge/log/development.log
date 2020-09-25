@@ -22299,3 +22299,1491 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 1.2ms | Allocations: 10071)
 
 
+Started GET "/" for ::1 at 2020-09-25 14:20:56 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 394)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 540ms (Views: 429.8ms | ActiveRecord: 0.0ms | Allocations: 10101)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:21:00 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 71.3ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 171.2ms | ActiveRecord: 0.0ms | Allocations: 5368)
+
+
+Started POST "/sessions" for ::1 at 2020-09-25 14:21:04 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"a8e8puhTnM7vjmTOovjQPNJ9kOu5CJ6HkHz02TjgVxK2Mz2ykNYbGTRaYHx8LQol5ErVIhNJc2xDOrn4pw9/Aw==", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 856ms (ActiveRecord: 3.1ms | Allocations: 7701)
+
+
+Started GET "/" for ::1 at 2020-09-25 14:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered home/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 763)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 204ms (Views: 200.9ms | ActiveRecord: 0.5ms | Allocations: 4974)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:21:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (4.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 814.6ms | Allocations: 10130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 894ms (Views: 876.0ms | ActiveRecord: 8.2ms | Allocations: 15459)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:21:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (19.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 40.7ms | Allocations: 1739)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 81.7ms | ActiveRecord: 20.2ms | Allocations: 6531)
+
+
+Started GET "/users/2/organizations/13/edit" for ::1 at 2020-09-25 14:21:21 -0500
+Processing by OrganizationsController#edit as HTML
+  Parameters: {"user_id"=>"2", "id"=>"13"}
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:9:in `edit'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:10:in `edit'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 72.3ms | Allocations: 2760)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 125ms (Views: 114.3ms | ActiveRecord: 0.8ms | Allocations: 8765)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:22:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 17.9ms | Allocations: 7320)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 54.3ms | ActiveRecord: 3.3ms | Allocations: 18017)
+
+
+Started GET "/users/13/edit" for ::1 at 2020-09-25 14:22:57 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 32.9ms | Allocations: 1818)
+  Rendered users/edit.html.erb within layouts/application (Duration: 61.5ms | Allocations: 2225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 113.2ms | ActiveRecord: 0.1ms | Allocations: 7122)
+
+
+Started GET "/users/13/asdf" for ::1 at 2020-09-25 14:23:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/13/asdf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/13" for ::1 at 2020-09-25 14:24:14 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 24.8ms | Allocations: 7333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 56.2ms | ActiveRecord: 4.5ms | Allocations: 18180)
+
+
+Started GET "/" for ::1 at 2020-09-25 14:24:15 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 636)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.1ms | Allocations: 5007)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:24:15 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 135ms (Views: 134.4ms | ActiveRecord: 0.0ms | Allocations: 4682)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:24:17 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 308)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 4490)
+
+
+Started POST "/sessions" for ::1 at 2020-09-25 14:24:20 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"mg4N9tgLR2QK0Gb/jLqL2GcfPYyocCN1U1l9/9JobRS2fexLrKsZBxbgvmID/5fmd3NyYwT8oC92galjZpZdhQ==", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 356ms (ActiveRecord: 1.9ms | Allocations: 1104)
+
+
+Started GET "/" for ::1 at 2020-09-25 14:24:21 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 627)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms | Allocations: 4830)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:24:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 1.2ms | Allocations: 6510)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:24:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 308)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.0ms | Allocations: 4522)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:24:28 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 308)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 4498)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:24:28 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 308)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 4500)
+
+
+Started POST "/sessions" for ::1 at 2020-09-25 14:24:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Avg7EPiCO34qhdgSsKHAYSkn6p5+UW7WNqx6w3r6qogui9qtjCJlHTa1AI8/5NxfOUulcdLd7YwTdK5fzgSaGQ==", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 331ms (ActiveRecord: 3.3ms | Allocations: 6776)
+
+
+Started GET "/" for ::1 at 2020-09-25 14:24:42 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered home/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 756)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms | Allocations: 5125)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:25:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 4641)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:25:11 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 308)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 4498)
+
+
+Started POST "/sessions" for ::1 at 2020-09-25 14:25:13 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"keWN7FEiIVF41fxZvxiS5RVuVlEZQOtSFwxMTOL17+G9lmxRJYJ/MmTlJMQwXY7bBQIZvrXMaAgy1JjQVgvfcA==", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/13/organizations
+Completed 302 Found in 393ms (ActiveRecord: 2.7ms | Allocations: 6756)
+
+
+Started GET "/users/13/organizations" for ::1 at 2020-09-25 14:25:14 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for OrganizationsController):
+  
+actionpack (6.0.3.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/13/organizations/13/edit" for ::1 at 2020-09-25 14:25:34 -0500
+Processing by OrganizationsController#edit as HTML
+  Parameters: {"user_id"=>"13", "id"=>"13"}
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:9:in `edit'
+Completed 404 Not Found in 178ms (ActiveRecord: 1.3ms | Allocations: 2096)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'=13):
+  
+app/controllers/organizations_controller.rb:9:in `edit'
+Started GET "/users/13/organizations/sdfd" for ::1 at 2020-09-25 14:25:34 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OrganizationsController#show as HTML
+  Parameters: {"user_id"=>"13", "id"=>"sdfd"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `show'
+Completed 404 Not Found in 8ms (ActiveRecord: 2.9ms | Allocations: 1233)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sdfd):
+  
+app/controllers/organizations_controller.rb:14:in `show'
+Started GET "/users/13/asdf" for ::1 at 2020-09-25 14:26:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/13/asdf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/13/ada" for ::1 at 2020-09-25 14:26:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/13/ada"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-09-25 14:26:44 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms | Allocations: 4631)
+
+
+Started GET "/login" for ::1 at 2020-09-25 14:26:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms | Allocations: 4679)
+
+
+Started POST "/sessions" for ::1 at 2020-09-25 14:26:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"gqoHJxiPXW87xekGO9d324fvIcONsk7sXrAi4e+3gguu2eaabC8DDCf1MZu0kmvll4NuLCE+zbZ7aPZ9W0mymg==", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 343ms (ActiveRecord: 2.0ms | Allocations: 6761)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:26:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 17.3ms | Allocations: 7367)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 38.9ms | ActiveRecord: 2.2ms | Allocations: 12366)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:28:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 106.6ms | Allocations: 2222)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 167ms (Views: 163.8ms | ActiveRecord: 0.6ms | Allocations: 7913)
+
+
+Started GET "/users/13/asdf" for ::1 at 2020-09-25 14:32:27 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/13/asdf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=leave" for ::1 at 2020-09-25 14:32:39 -0500
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"leave"}
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2753)
+
+
+Started GET "/users/13/edit" for ::1 at 2020-09-25 14:34:07 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/users/13" for ::1 at 2020-09-25 14:34:08 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 19.4ms | Allocations: 1623)
+  Rendered users/edit.html.erb within layouts/application (Duration: 34.0ms | Allocations: 2020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 125ms (Views: 92.6ms | ActiveRecord: 1.3ms | Allocations: 13524)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 98.5ms | Allocations: 8676)
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 6.3ms | Allocations: 15779)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"leave", :controller=>"organizations", :id=>"13", :user_id=>#<Organization id: 2, name: "test", hourlyrate: 0.125e2, user_id: 13, created_at: "2020-09-16 17:30:46", updated_at: "2020-09-17 21:08:41">}, missing required keys: [:organization_id]):
+    12:     <h1><%= organization.name %></h1>
+    13:     <%= link_to 'View Shifts', new_user_shift_path(@user) %>
+    14:     <%= link_to 'Edit', edit_user_organization_path(organization) %>
+    15:     <%= link_to 'Leave', user_organization_leave_path(organization) %>
+    16:   <% end %>
+    17: <% else %>
+    18:   <p>
+  
+app/views/users/show.html.erb:15
+app/views/users/show.html.erb:11
+Started GET "/users/13" for ::1 at 2020-09-25 14:35:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3107)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms | Allocations: 4844)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"leave", :controller=>"organizations", :id=>"13", :user_id=>nil}, missing required keys: [:organization_id], possible unmatched constraints: [:user_id]):
+    12:     <h1><%= organization.name %></h1>
+    13:     <%= link_to 'View Shifts', new_user_shift_path(@user) %>
+    14:     <%= link_to 'Edit', edit_user_organization_path(organization) %>
+    15:     <%= link_to 'Leave', user_organization_leave_path(@organization) %>
+    16:   <% end %>
+    17: <% else %>
+    18:   <p>
+  
+app/views/users/show.html.erb:15
+app/views/users/show.html.erb:11
+Started GET "/users/13" for ::1 at 2020-09-25 14:36:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.5ms | Allocations: 7881)
+
+
+Started GET "/users/13/organizations/2/leave" for ::1 at 2020-09-25 14:36:11 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"user_id"=>"13", "organization_id"=>"2"}
+Completed 500 Internal Server Error in 1040ms (ActiveRecord: 0.0ms | Allocations: 97982)
+
+
+  
+NameError (undefined local variable or method `fjkdsfkljsdf' for #<OrganizationsController:0x00007fa3cf40a9a0>):
+  
+app/controllers/organizations_controller.rb:14:in `leave'
+Started GET "/users/13/organizations/2/leave" for ::1 at 2020-09-25 14:39:33 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/organizations_controller.rb:14: syntax error, unexpected ')', expecting ']'
+...n.find(params[:organization_id)
+...                              ^):
+  
+app/controllers/organizations_controller.rb:14: syntax error, unexpected ')', expecting ']'
+app/controllers/organizations_controller.rb:14: syntax error, unexpected ')', expecting ']'
+app/controllers/organizations_controller.rb:14: syntax error, unexpected ')', expecting ']'
+Started GET "/users/13" for ::1 at 2020-09-25 14:39:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 31.4ms | Allocations: 7257)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 62.9ms | ActiveRecord: 3.7ms | Allocations: 17948)
+
+
+Started GET "/users/13/organizations/2/leave" for ::1 at 2020-09-25 14:39:46 -0500
+  
+SyntaxError (/Users/parkerjoncus/Downloads/Tanda/adnatBackend/challenge/app/controllers/organizations_controller.rb:14: syntax error, unexpected ')', expecting ']'
+...n.find(params[:organization_id)
+...                              ^):
+  
+app/controllers/organizations_controller.rb:14: syntax error, unexpected ')', expecting ']'
+app/controllers/organizations_controller.rb:14: syntax error, unexpected ')', expecting ']'
+app/controllers/organizations_controller.rb:14: syntax error, unexpected ')', expecting ']'
+Started GET "/users/13/organizations/2/leave" for ::1 at 2020-09-25 14:40:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"user_id"=>"13", "organization_id"=>"2"}
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:15:in `leave'
+Completed 500 Internal Server Error in 777ms (ActiveRecord: 2.4ms | Allocations: 109555)
+
+
+  
+NameError (undefined local variable or method `organization' for #<OrganizationsController:0x00007fa3cf3eafb0>
+Did you mean?  @organization):
+  
+app/controllers/organizations_controller.rb:16:in `leave'
+Started GET "/users/13/organizations/2/leave" for ::1 at 2020-09-25 14:40:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"user_id"=>"13", "organization_id"=>"2"}
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:15:in `leave'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1107)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 5.4ms | Allocations: 14728)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"organizations", :organization_id=>"2", :user_id=>"13"}, missing required keys: [:id]):
+    1: <h2>Edit Organization:</h2>
+    2: <%= form_with(model: @organization, url: user_organization_path, local: false) do |form| %>
+    3:   <p>
+    4:     <%= form.label :name %>
+    5:     <%= form.text_field :name %>
+  
+app/views/organizations/edit.html.erb:2
+app/controllers/organizations_controller.rb:20:in `leave'
+Started GET "/users/13/organizations/2/leave/kjkh" for ::1 at 2020-09-25 14:41:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/13/organizations/2/leave/kjkh"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/13/organizations/2/leave" for ::1 at 2020-09-25 14:42:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"user_id"=>"13", "organization_id"=>"2"}
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:15:in `leave'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 880)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 2.6ms | Allocations: 13915)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"organizations", :organization_id=>"2", :user_id=>"13"}, missing required keys: [:id]):
+    1: <h2>Edit Organization:</h2>
+    2: <%= form_with(model: @organization, url: user_organization_path, local: false) do |form| %>
+    3:   <p>
+    4:     <%= form.label :name %>
+    5:     <%= form.text_field :name %>
+  
+app/views/organizations/edit.html.erb:2
+app/controllers/organizations_controller.rb:20:in `leave'
+Started POST "/sessions" for ::1 at 2020-09-25 14:42:24 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ldggBoVC/hE27A0raKhTN98ri2NP9ScpJUzJYZIWgVxILKES/cd5xu04CZm2fYku6RzOquW0ysL2CoRADfmpTQ==", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 525ms (ActiveRecord: 3.9ms | Allocations: 1122)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:42:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2397)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 1.3ms | Allocations: 7275)
+
+
+Started GET "/users/13/organizations/2/leave" for ::1 at 2020-09-25 14:42:25 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"user_id"=>"13", "organization_id"=>"2"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:15:in `leave'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 876)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.8ms | Allocations: 3148)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"organizations", :organization_id=>"2", :user_id=>"13"}, missing required keys: [:id]):
+    1: <h2>Edit Organization:</h2>
+    2: <%= form_with(model: @organization, url: user_organization_path, local: false) do |form| %>
+    3:   <p>
+    4:     <%= form.label :name %>
+    5:     <%= form.text_field :name %>
+  
+app/views/organizations/edit.html.erb:2
+app/controllers/organizations_controller.rb:20:in `leave'
+Started GET "/users/13/organizations/2/leave" for ::1 at 2020-09-25 14:45:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/13/organizations/2/leave"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-25 14:47:46 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered home/index.html.erb within layouts/application (Duration: 49.1ms | Allocations: 6612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 87.3ms | ActiveRecord: 2.5ms | Allocations: 11700)
+
+
+Started GET "/" for ::1 at 2020-09-25 14:47:54 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 633)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 149ms (Views: 148.2ms | ActiveRecord: 0.2ms | Allocations: 4827)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:47:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 40.5ms | Allocations: 7776)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 59.8ms | ActiveRecord: 6.1ms | Allocations: 13076)
+
+
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 14:48:00 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+Completed 404 Not Found in 17ms (ActiveRecord: 0.6ms | Allocations: 1292)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/organizations_controller.rb:15:in `leave'
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 14:50:21 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1095)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 4.2ms | Allocations: 14556)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"organizations", :organization_id=>"2"}, missing required keys: [:id]):
+    1: <h2>Edit Organization:</h2>
+    2: <%= form_with(model: @organization, url: organization_path, local: false) do |form| %>
+    3:   <p>
+    4:     <%= form.label :name %>
+    5:     <%= form.text_field :name %>
+  
+app/views/organizations/edit.html.erb:2
+app/controllers/organizations_controller.rb:20:in `leave'
+Started GET "/users" for ::1 at 2020-09-25 14:50:54 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (2.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 196.0ms | Allocations: 6980)
+Started GET "/user" for ::1 at 2020-09-25 14:50:54 -0500
+Started GET "/users" for ::1 at 2020-09-25 14:50:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+Completed 200 OK in 565ms (Views: 550.3ms | ActiveRecord: 3.7ms | Allocations: 43493)
+
+
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 28.7ms | Allocations: 8727)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 105.9ms | ActiveRecord: 1.8ms | Allocations: 34045)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:50:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 22.6ms | Allocations: 1617)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 1.0ms | Allocations: 6399)
+
+
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 14:51:00 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (1.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 875)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.0ms | Allocations: 3170)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"organizations", :organization_id=>"2"}, missing required keys: [:id]):
+    1: <h2>Edit Organization:</h2>
+    2: <%= form_with(model: @organization, url: organization_path, local: false) do |form| %>
+    3:   <p>
+    4:     <%= form.label :name %>
+    5:     <%= form.text_field :name %>
+  
+app/views/organizations/edit.html.erb:2
+app/controllers/organizations_controller.rb:20:in `leave'
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 14:52:09 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1104)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.2ms | Allocations: 7992)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 14:52:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 37.1ms | ActiveRecord: 1.0ms | Allocations: 7492)
+
+
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 14:52:17 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 29.4ms | ActiveRecord: 0.5ms | Allocations: 6826)
+
+
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 14:52:20 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering organizations/edit.html.erb within layouts/application
+  Rendered organizations/edit.html.erb within layouts/application (Duration: 23.3ms | Allocations: 865)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 91.3ms | ActiveRecord: 0.8ms | Allocations: 6825)
+
+
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 14:53:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 422 Unprocessable Entity in 63ms (ActiveRecord: 5.5ms | Allocations: 12886)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/organizations_controller.rb:17:in `leave'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Changeuseridnull (20200925195733)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorganizations" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "hourlyrate" decimal DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorganizations_on_user_id" ON "aorganizations" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "aorganizations" ("id","name","hourlyrate","user_id","created_at","updated_at")
+                     SELECT "id","name","hourlyrate","user_id","created_at","updated_at" FROM "organizations"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "organizations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "hourlyrate" decimal DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_7b93e0061c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_organizations_on_user_id" ON "organizations" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "organizations" ("id","name","hourlyrate","user_id","created_at","updated_at")
+                     SELECT "id","name","hourlyrate","user_id","created_at","updated_at" FROM "aorganizations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aorganizations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200925195733"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/13" for ::1 at 2020-09-25 15:01:12 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 52.7ms | Allocations: 10113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 215ms (Views: 144.4ms | ActiveRecord: 3.6ms | Allocations: 27046)
+
+
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 15:01:14 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 422 Unprocessable Entity in 26ms (ActiveRecord: 0.6ms | Allocations: 3707)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/organizations_controller.rb:17:in `leave'
+Started GET "/users/13" for ::1 at 2020-09-25 15:01:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1613)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 74.9ms | ActiveRecord: 0.9ms | Allocations: 6455)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 15:01:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1588)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 0.8ms | Allocations: 6344)
+
+
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 15:01:22 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.4ms | Allocations: 2279)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/organizations_controller.rb:17:in `leave'
+Started GET "/users/13" for ::1 at 2020-09-25 15:02:31 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 41.8ms | Allocations: 7203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 65.9ms | ActiveRecord: 6.0ms | Allocations: 17977)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 15:02:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1589)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.8ms | ActiveRecord: 0.8ms | Allocations: 6345)
+
+
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 15:02:35 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/organizations_controller.rb:17:in `leave'
+  [1m[36mOrganization Update (1.1ms)[0m  [1m[33mUPDATE "organizations" SET "user_id" = ?, "updated_at" = ? WHERE "organizations"."id" = ?[0m  [["user_id", nil], ["updated_at", "2020-09-25 20:02:35.310823"], ["id", 2]]
+  ↳ app/controllers/organizations_controller.rb:17:in `leave'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/organizations_controller.rb:17:in `leave'
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 38ms (ActiveRecord: 4.5ms | Allocations: 3844)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 15:02:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/show.html.erb:23
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (Duration: 657.0ms | Allocations: 85622)
+Completed 500 Internal Server Error in 676ms (ActiveRecord: 3.7ms | Allocations: 86857)
+
+
+  
+ActionView::Template::Error (undefined method `user_organizations_path' for #<#<Class:0x00007fbfdacc93a8>:0x00007fbfd74b70f0>):
+    33:   <% end %>
+    34:    
+    35:   <h2>Create Organization:</h2>
+    36:   <%= form_with(model: [ @user, @user.organizations.build ], local: true) do |form| %>
+    37:     <p>
+    38:       <%= form.label :name %>
+    39:       <%= form.text_field :name %>
+  
+app/views/users/show.html.erb:36
+Started GET "/organizations/2/leave" for ::1 at 2020-09-25 15:04:05 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"2"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1558)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 15:04:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/show.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (Duration: 53.1ms | Allocations: 11920)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 102.4ms | ActiveRecord: 1.9ms | Allocations: 17524)
+
+
+Started GET "/organizations/6" for ::1 at 2020-09-25 15:04:10 -0500
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE 1=0[0m
+  ↳ app/controllers/organizations_controller.rb:26:in `show'
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/organizations_controller.rb:26:in `show'
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 26ms (ActiveRecord: 0.9ms | Allocations: 2174)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 15:04:10 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/show.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (1.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (Duration: 37.0ms | Allocations: 6925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 146ms (Views: 69.8ms | ActiveRecord: 3.5ms | Allocations: 11697)
+
+
+Started GET "/organizations/6" for ::1 at 2020-09-25 15:04:14 -0500
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE 1=0[0m
+  ↳ app/controllers/organizations_controller.rb:26:in `show'
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/organizations_controller.rb:26:in `show'
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 31ms (ActiveRecord: 2.0ms | Allocations: 2159)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 15:04:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/show.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (Duration: 54.5ms | Allocations: 6914)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 85.5ms | ActiveRecord: 2.6ms | Allocations: 11679)
+
+
+Started GET "/users" for ::1 at 2020-09-25 15:04:17 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:23
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 35.6ms | Allocations: 6171)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 89.2ms | ActiveRecord: 4.1ms | Allocations: 10524)
+
+
+Started GET "/users/15" for ::1 at 2020-09-25 15:04:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:11
+  Rendered users/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1593)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 1.5ms | Allocations: 6351)
+
+
+Started GET "/organizations/5/leave" for ::1 at 2020-09-25 15:04:22 -0500
+Processing by OrganizationsController#leave as HTML
+  Parameters: {"organization_id"=>"5"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:14:in `leave'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/organizations_controller.rb:17:in `leave'
+  [1m[36mOrganization Update (0.8ms)[0m  [1m[33mUPDATE "organizations" SET "user_id" = ?, "updated_at" = ? WHERE "organizations"."id" = ?[0m  [["user_id", nil], ["updated_at", "2020-09-25 20:04:22.547407"], ["id", 5]]
+  ↳ app/controllers/organizations_controller.rb:17:in `leave'
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/organizations_controller.rb:17:in `leave'
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 39ms (ActiveRecord: 5.1ms | Allocations: 3591)
+
+
+Started GET "/users/13" for ::1 at 2020-09-25 15:04:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/show.html.erb:23
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (2.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/show.html.erb:24
+  Rendered users/show.html.erb within layouts/application (Duration: 48.5ms | Allocations: 6848)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 67.1ms | ActiveRecord: 5.6ms | Allocations: 11628)
+
+
